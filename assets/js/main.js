@@ -11,7 +11,6 @@
       "nav.products": "产品",
       "nav.brand": "关于",
       "nav.cta": "开始探索",
-      "hero.badge": "algosoft.cc 正式上线",
       "hero.title1": "为开发者打造的",
       "hero.title2": "算法级工具家族",
       "hero.subtitle":
@@ -73,7 +72,6 @@
       "nav.products": "Products",
       "nav.brand": "About",
       "nav.cta": "Get Started",
-      "hero.badge": "algosoft.cc is now live",
       "hero.title1": "A family of tools",
       "hero.title2": "built for developers",
       "hero.subtitle":
