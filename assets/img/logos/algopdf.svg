@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="pdfg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角正方形紫色渐变背景 -->
+  <rect width="200" height="200" rx="44" fill="url(#pdfg2)"/>
+
+  <!-- 后层文档（暗示多屏 / 双页阅读）-->
+  <rect x="76" y="28" width="80" height="106" rx="7"
+        stroke="white" stroke-width="6" fill="none" opacity="0.25"
+        stroke-linejoin="round"/>
+
+  <!-- 前层文档：圆角矩形 + 右上折角 -->
+  <path d="M44 44 L116 44 L148 76 L148 158 L44 158 Z"
+        stroke="white" stroke-width="11" fill="none"
+        stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- 折角线 -->
+  <path d="M116 44 L116 76 L148 76"
+        stroke="white" stroke-width="11" fill="none"
+        stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- 播放三角形 -->
+  <path d="M76 82 L76 130 L112 106 Z" fill="white"/>
+</svg>

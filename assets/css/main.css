@@ -13,9 +13,7 @@
   --cyan: #22d3ee;
   --violet: #818cf8;
   --orange: #fb923c;
-  --rose: #fb7185;
   --emerald: #34d399;
-  --sky: #38bdf8;
 
   --gradient: linear-gradient(100deg, var(--cyan), var(--violet));
   --radius: 14px;
@@ -330,32 +328,19 @@ a { color: inherit; text-decoration: none; }
 
 .product-card:hover::before { opacity: 1; }
 
-.accent-cyan { --card-accent: linear-gradient(90deg, #22d3ee, #67e8f9); }
-.accent-violet { --card-accent: linear-gradient(90deg, #818cf8, #a78bfa); }
-.accent-orange { --card-accent: linear-gradient(90deg, #fb923c, #fdba74); }
-.accent-rose { --card-accent: linear-gradient(90deg, #fb7185, #fda4af); }
-.accent-emerald { --card-accent: linear-gradient(90deg, #34d399, #6ee7b7); }
-.accent-sky { --card-accent: linear-gradient(90deg, #38bdf8, #7dd3fc); }
+.accent-cyan { --icon-color: var(--cyan); --card-accent: linear-gradient(90deg, #22d3ee, #67e8f9); }
+.accent-blue { --icon-color: #60a5fa; --card-accent: linear-gradient(90deg, #3B82F6, #60a5fa); }
+.accent-violet { --icon-color: var(--violet); --card-accent: linear-gradient(90deg, #7C3AED, #a78bfa); }
+.accent-orange { --icon-color: var(--orange); --card-accent: linear-gradient(90deg, #F97316, #fdba74); }
+.accent-red { --icon-color: #f87171; --card-accent: linear-gradient(90deg, #EF4444, #fca5a5); }
+.accent-emerald { --icon-color: var(--emerald); --card-accent: linear-gradient(90deg, #10B981, #6ee7b7); }
 
-.product-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
+.product-logo {
+  width: 52px;
+  height: 52px;
   margin-bottom: 18px;
-  background: color-mix(in srgb, var(--icon-color, var(--cyan)) 14%, transparent);
-  color: var(--icon-color, var(--cyan));
+  border-radius: 12px;
 }
-
-.product-card.accent-cyan { --icon-color: var(--cyan); }
-.product-card.accent-violet { --icon-color: var(--violet); }
-.product-card.accent-orange { --icon-color: var(--orange); }
-.product-card.accent-rose { --icon-color: var(--rose); }
-.product-card.accent-emerald { --icon-color: var(--emerald); }
-.product-card.accent-sky { --icon-color: var(--sky); }
-
-.product-icon svg { width: 22px; height: 22px; }
 
 .product-head {
   display: flex;
