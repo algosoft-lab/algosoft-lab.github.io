@@ -11,6 +11,25 @@
 | **AlgoCode** | 代码编辑器 |
 | **AlgoClass** | 编程教学课堂平台 |
 
+## 线上部署（algocode.cc 服务器）
+
+站点部署在 algocode.cc 服务器（103.85.226.45）上，由 `algocode-proxy` 直接作为静态文件服务：
+
+- 网站文件：`/var/www/algosoft.cc/`（属主 `algocode`）
+- 域名：`algosoft.cc` / `www.algosoft.cc` → 静态站；`algocode.cc` / `www.algocode.cc` → 反代 127.0.0.1:8080
+- 证书：Let's Encrypt（`--cert-name algocode-cc`，四域名 SAN），certbot 自动续期，
+  续期钩子 `/etc/letsencrypt/renewal-hooks/deploy/50-algocode-proxy.sh` 会替换证书并重启 proxy
+
+更新网站内容：
+
+```bash
+# 本机（WSL）同步到服务器
+rsync -az --delete --exclude '.git' --exclude 'README.md' \
+  /home/lionel/algo-soft/ root@algocode.cc:/var/www/algosoft.cc/
+```
+
+代理配置与源码：`/home/lionel/algocode_proxy`（服务器配置 `/etc/algocode-proxy/config.toml`）。
+
 ## 技术说明
 
 纯静态单页站点，无构建步骤、无外部依赖（字体、图标均为本地 / 内联资源）：
