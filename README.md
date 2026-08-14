@@ -2,14 +2,14 @@
 
 [algosoft.cc](https://algosoft.cc) 的官方网站，介绍 AlgoSoft 旗下的六款产品：
 
-| 产品 | 原名 | 定位 |
-| --- | --- | --- |
-| **AlgoCOM** | augur-com | 串口通信与调试 |
-| **AlgoTerm** | augur-term | 终端模拟器 |
-| **AlgoGit** | augur-git | Git 图形化客户端 |
-| **AlgoPDF** | augur-pdf | PDF 工具箱 |
-| **AlgoCode** | — | 代码编辑器 |
-| **AlgoClass** | — | 编程教学课堂平台 |
+| 产品 | 定位 |
+| --- | --- |
+| **AlgoCOM** | 串口通信与调试 |
+| **AlgoTerm** | 终端模拟器 |
+| **AlgoGit** | Git 图形化客户端 |
+| **AlgoPDF** | PDF 工具箱 |
+| **AlgoCode** | 代码编辑器 |
+| **AlgoClass** | 编程教学课堂平台 |
 
 ## 技术说明
 

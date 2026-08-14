@@ -278,14 +278,6 @@ a { color: inherit; text-decoration: none; }
 .t-prompt { color: var(--emerald); }
 .t-ok { color: var(--emerald); }
 .t-dim { color: var(--text-dim); }
-.t-badge {
-  color: var(--violet);
-  border: 1px solid rgba(129, 140, 248, 0.35);
-  border-radius: 6px;
-  padding: 0 6px;
-  font-size: 0.72rem;
-}
-
 .t-cursor {
   display: inline-block;
   width: 8px;
@@ -320,45 +312,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section-subtitle { margin: 0; color: var(--text-muted); }
-
-/* ============ 更名公告 ============ */
-.rebrand { padding-top: 20px; }
-
-.rename-grid {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  max-width: 860px;
-}
-
-.rename-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px 18px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.rename-item:hover { border-color: rgba(34, 211, 238, 0.4); transform: translateY(-2px); }
-
-.rename-item svg { width: 15px; height: 15px; color: var(--text-dim); flex-shrink: 0; }
-
-.rename-item .old {
-  color: var(--text-dim);
-  text-decoration: line-through;
-  text-decoration-color: rgba(251, 113, 133, 0.6);
-}
-
-.rename-item .new { color: var(--cyan); font-weight: 600; }
 
 /* ============ 产品卡片 ============ */
 .product-grid {
@@ -433,17 +386,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 .product-name { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; }
-
-.rename-pill {
-  font-size: 0.72rem;
-  font-family: var(--font-mono);
-  color: var(--violet);
-  background: rgba(129, 140, 248, 0.12);
-  border: 1px solid rgba(129, 140, 248, 0.3);
-  border-radius: 999px;
-  padding: 2px 9px;
-  white-space: nowrap;
-}
 
 .product-tagline { margin: 0 0 16px; color: var(--text-muted); font-size: 0.94rem; }
 
