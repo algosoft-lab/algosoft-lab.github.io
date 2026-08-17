@@ -41,9 +41,17 @@ pnpm build 会生成包含首页和产品文档入口的 dist/ 静态站点：
       styles/        全局样式
       types/         TypeScript 类型
     public/assets/   logo、favicon 等静态资源
+    public/robots.txt
+    public/sitemap.xml
     legacy/          迁移前的静态资源与辅助脚本归档
 
-站点部署在 algosoft.cc 时，需要将 dist/ 内容作为静态文件根目录，并确保 /en/ 映射到 dist/en/index.html。
+站点部署在 algosoft.cc 时，需要将 dist/ 内容作为静态文件根目录，并确保 /en/ 映射到 dist/en/index.html。SEO 文件位于 public/，构建后会复制到 dist/ 根目录。
+
+## GitHub Pages 部署
+
+GitHub Actions 工作流位于 `.github/workflows/deploy-pages.yml`。将代码合并到 `publish` 分支后会自动执行 `pnpm install --frozen-lockfile`、类型检查、构建并部署 `dist/` 到 GitHub Pages，也可以从 Actions 页面手动触发。
+
+在仓库设置中将 Pages 的构建来源设置为 GitHub Actions；如果继续使用 `algosoft.cc`，还需要在 Pages 设置中配置自定义域名和 DNS。
 
 ## 添加产品文档
 
