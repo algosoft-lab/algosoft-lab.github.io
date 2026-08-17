@@ -6,7 +6,7 @@
   "scripts": {
     "build": "pnpm typecheck && vite build",
     "dev": "vite",
-    "format": "prettier ./src --write && jsonsort .",
+    "format": "prettier ./src --write && jsonsort ./*.json",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
