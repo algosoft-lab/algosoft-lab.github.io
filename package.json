@@ -1,0 +1,23 @@
+{
+  "name": "algosoft-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "pnpm typecheck && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "element-plus": "^2.14.4",
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  }
+}

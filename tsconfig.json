@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2024",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@composables/*": ["./src/composables/*"],
+      "@data/*": ["./src/data/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@models/*": ["./src/types/*"]
+    },
+    "types": ["vite/client"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "vite.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}

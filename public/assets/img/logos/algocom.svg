@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="comg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角方形蓝色渐变背景 -->
+  <rect width="200" height="200" rx="44" fill="url(#comg2)"/>
+
+  <!-- 数字方波：串口数据流（UART 帧示意）-->
+  <path d="M40 134 L40 66 L70 66 L70 134 L100 134 L100 66 L130 66 L130 134 L160 134"
+        stroke="white" stroke-width="14"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
