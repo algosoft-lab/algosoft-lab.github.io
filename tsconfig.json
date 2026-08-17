@@ -26,6 +26,9 @@
       "@data/*": [
         "./src/data/*"
       ],
+      "@docs/*": [
+        "./src/docs/*"
+      ],
       "@models/*": [
         "./src/types/*"
       ],

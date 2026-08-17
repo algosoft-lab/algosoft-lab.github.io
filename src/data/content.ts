@@ -58,6 +58,7 @@ const zhContent: SiteContent = {
     products: '产品',
     faq: '常见问题',
     about: '关于',
+    docs: '文档',
     cta: '开始探索',
   },
   hero: {
@@ -235,6 +236,7 @@ const enContent: SiteContent = {
     products: 'Products',
     faq: 'FAQ',
     about: 'About',
+    docs: 'Docs',
     cta: 'Get Started',
   },
   hero: {

@@ -43,6 +43,7 @@ export interface SiteContent {
     products: string;
     faq: string;
     about: string;
+    docs: string;
     cta: string;
   };
   hero: {

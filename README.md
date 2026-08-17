@@ -9,6 +9,10 @@ AlgoSoft 官方产品家族官网，现已迁移为 Vite + Vue + TypeScript 7 �
 - TypeScript 7.0.2
 - ES2024
 - Element Plus 2.14.4
+- markdown-it 15.0.0
+- highlight.js 11.12.0
+- Mermaid 11.16.1
+- yaml 2.9.0
 - TypeScript path aliases（@/、@components/、@composables/、@data/、@styles/）
 
 ## 本地开发
@@ -22,7 +26,10 @@ AlgoSoft 官方产品家族官网，现已迁移为 Vite + Vue + TypeScript 7 �
     pnpm build
     pnpm preview
 
-pnpm build 会生成包含 / 和 /en/ 两个入口的 dist/ 静态站点。
+pnpm build 会生成包含首页和产品文档入口的 dist/ 静态站点：
+
+- `/` 与 `/en/`
+- `/docs/algocode/` 与 `/en/docs/algocode/`
 
 ## 目录结构
 
@@ -30,9 +37,19 @@ pnpm build 会生成包含 / 和 /en/ 两个入口的 dist/ 静态站点。
       components/    页面组件
       composables/   Vue composables
       data/          中英文内容数据
+      docs/          按语言保存的 Markdown 产品文档
       styles/        全局样式
       types/         TypeScript 类型
     public/assets/   logo、favicon 等静态资源
     legacy/          迁移前的静态资源与辅助脚本归档
 
 站点部署在 algosoft.cc 时，需要将 dist/ 内容作为静态文件根目录，并确保 /en/ 映射到 dist/en/index.html。
+
+## 添加产品文档
+
+为新产品分别添加中英文 Markdown 文件：
+
+    src/docs/zh-CN/<product>.md
+    src/docs/en/<product>.md
+
+文档支持 YAML frontmatter、代码块、语法高亮和 Mermaid 图表。为产品增加新的静态入口后，Vite 会将其输出到对应的 `/docs/<product>/` 和 `/en/docs/<product>/` 路径。

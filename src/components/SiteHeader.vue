@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { onMounted, onUnmounted, ref } from 'vue';
 
 import BrandLogo from '@components/BrandLogo.vue';
+import { getSiteRoutes } from '@composables/useSiteRoutes';
 import type { SiteContent } from '@/types/content';
 
-defineProps<{ content: SiteContent }>();
+const props = defineProps<{ content: SiteContent }>();
+const routes = computed(() => getSiteRoutes(props.content.locale));
 
 const isScrolled = ref(false);
 
@@ -25,20 +28,23 @@ onUnmounted(() => {
 <template>
   <header class="nav" id="nav" :class="{ scrolled: isScrolled }">
     <div class="container nav-inner">
-      <BrandLogo />
-      <nav class="nav-links" :aria-label="content.navigation.products">
-        <a href="#products">{{ content.navigation.products }}</a>
-        <a href="#faq">{{ content.navigation.faq }}</a>
-        <a href="#brand">{{ content.navigation.about }}</a>
+      <BrandLogo :href="routes.home" />
+      <nav class="nav-links" :aria-label="props.content.navigation.products">
+        <a :href="routes.products">{{ props.content.navigation.products }}</a>
+        <a :href="routes.faq">{{ props.content.navigation.faq }}</a>
+        <a :href="routes.about">{{ props.content.navigation.about }}</a>
+        <a :href="routes.docs">{{ props.content.navigation.docs }}</a>
       </nav>
       <div class="nav-actions">
         <a
           class="lang-toggle"
-          :href="content.alternateLocale === 'en' ? '/en/' : '/'"
-          :hreflang="content.alternateLocale === 'en' ? 'en' : 'zh-CN'"
-          >{{ content.alternateLabel }}</a
+          :href="routes.alternate"
+          :hreflang="props.content.alternateLocale === 'en' ? 'en' : 'zh-CN'"
+          >{{ props.content.alternateLabel }}</a
         >
-        <a class="nav-cta" href="#products">{{ content.navigation.cta }}</a>
+        <a class="nav-cta" :href="routes.products">{{
+          props.content.navigation.cta
+        }}</a>
       </div>
     </div>
   </header>
