@@ -1,10 +1,10 @@
 #!/bin/bash
 # 搜索引擎推送：IndexNow（Bing/Yandex 等）+ 百度（需要 token）
 # 用法:
-#   ./scripts/push-search-engines.sh              # 仅 IndexNow
-#   BAIDU_TOKEN=xxx ./scripts/push-search-engines.sh   # 加百度推送
+#   ./legacy/scripts/push-search-engines.sh                    # 仅 IndexNow
+#   BAIDU_TOKEN=xxx ./legacy/scripts/push-search-engines.sh    # 加百度推送
 set -e
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/../.."
 
 SITE="algosoft.cc"
 URLS="https://algosoft.cc/"

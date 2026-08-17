@@ -33,5 +33,6 @@ pnpm build 会生成包含 / 和 /en/ 两个入口的 dist/ 静态站点。
       styles/        全局样式
       types/         TypeScript 类型
     public/assets/   logo、favicon 等静态资源
+    legacy/          迁移前的静态资源与辅助脚本归档
 
 站点部署在 algosoft.cc 时，需要将 dist/ 内容作为静态文件根目录，并确保 /en/ 映射到 dist/en/index.html。
