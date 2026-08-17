@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { SiteContent } from '@/types/content'
+import type { SiteContent } from '@/types/content';
 
-defineProps<{ content: SiteContent }>()
+defineProps<{ content: SiteContent }>();
 </script>
 
 <template>
@@ -13,11 +13,17 @@ defineProps<{ content: SiteContent }>()
         <p class="section-subtitle">{{ content.faq.subtitle }}</p>
       </div>
       <div class="faq-list">
-        <details v-for="item in content.faq.items" :key="item.question" class="faq-item reveal">
+        <details
+          v-for="item in content.faq.items"
+          :key="item.question"
+          class="faq-item reveal"
+        >
           <summary>{{ item.question }}</summary>
           <p>
             {{ item.answer }}
-            <a v-if="item.answerLink" :href="item.answerLink.href">{{ item.answerLink.label }}</a>
+            <a v-if="item.answerLink" :href="item.answerLink.href">{{
+              item.answerLink.label
+            }}</a>
           </p>
         </details>
       </div>

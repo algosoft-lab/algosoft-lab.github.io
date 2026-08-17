@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ElButton } from 'element-plus'
+import { ElButton } from 'element-plus';
 
-import type { SiteContent } from '@/types/content'
+import type { SiteContent } from '@/types/content';
 
-defineProps<{ content: SiteContent }>()
+defineProps<{ content: SiteContent }>();
 </script>
 
 <template>
@@ -19,16 +19,27 @@ defineProps<{ content: SiteContent }>()
       </h1>
       <p class="hero-subtitle reveal">{{ content.hero.subtitle }}</p>
       <div class="hero-cta reveal">
-        <ElButton class="btn btn-primary" tag="a" href="#products">{{ content.hero.primaryCta }}</ElButton>
-        <ElButton class="btn btn-ghost" tag="a" href="#brand">{{ content.hero.secondaryCta }}</ElButton>
+        <ElButton class="btn btn-primary" tag="a" href="#products">{{
+          content.hero.primaryCta
+        }}</ElButton>
+        <ElButton class="btn btn-ghost" tag="a" href="#brand">{{
+          content.hero.secondaryCta
+        }}</ElButton>
       </div>
 
-      <div class="terminal reveal" role="img" :aria-label="content.hero.terminalLabel">
+      <div
+        class="terminal reveal"
+        role="img"
+        :aria-label="content.hero.terminalLabel"
+      >
         <div class="terminal-bar">
-          <span class="tl red"></span><span class="tl yellow"></span><span class="tl green"></span>
+          <span class="tl red"></span><span class="tl yellow"></span
+          ><span class="tl green"></span>
           <span class="terminal-title">algosoft — zsh</span>
         </div>
-        <pre class="terminal-body"><code><span class="t-prompt">$</span> algosoft --list --all
+        <pre
+          class="terminal-body"
+        ><code><span class="t-prompt">$</span> algosoft --list --all
 <span class="t-ok">●</span> AlgoCOM    <span class="t-dim">{{ content.locale === 'zh' ? 'serial communication' : 'serial communication' }}</span>
 <span class="t-ok">●</span> AlgoTerm   <span class="t-dim">terminal emulator</span>
 <span class="t-ok">●</span> AlgoGit    <span class="t-dim">git client</span>

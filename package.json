@@ -1,12 +1,12 @@
 {
   "name": "algosoft-site",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "type": "module",
-  "packageManager": "pnpm@11.21.0",
   "scripts": {
-    "dev": "vite",
     "build": "pnpm typecheck && vite build",
+    "dev": "vite",
+    "format": "prettier ./src --write && jsonsort .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
@@ -19,5 +19,6 @@
     "@vitejs/plugin-vue": "^6.0.8",
     "typescript": "^7.0.2",
     "vite": "^8.2.1"
-  }
+  },
+  "packageManager": "pnpm@11.21.0"
 }

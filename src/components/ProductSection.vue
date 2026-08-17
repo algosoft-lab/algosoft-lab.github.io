@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import ProductCard from '@components/ProductCard.vue'
-import type { SiteContent } from '@/types/content'
+import ProductCard from '@components/ProductCard.vue';
+import type { SiteContent } from '@/types/content';
 
-defineProps<{ content: SiteContent }>()
+defineProps<{ content: SiteContent }>();
 </script>
 
 <template>
@@ -14,7 +14,11 @@ defineProps<{ content: SiteContent }>()
         <p class="section-subtitle">{{ content.products.subtitle }}</p>
       </div>
       <div class="product-grid">
-        <ProductCard v-for="product in content.products.items" :key="product.name" :product="product" />
+        <ProductCard
+          v-for="product in content.products.items"
+          :key="product.name"
+          :product="product"
+        />
       </div>
     </div>
   </section>
