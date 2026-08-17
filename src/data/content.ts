@@ -1,12 +1,14 @@
 import type { Locale, SiteContent } from '@/types/content';
 
+const assetBase = import.meta.env.BASE_URL;
+
 const productLogos = {
-  algocom: '/assets/img/logos/algocom.svg',
-  algoterm: '/assets/img/logos/algoterm.svg',
-  algogit: '/assets/img/logos/algogit.svg',
-  algopdf: '/assets/img/logos/algopdf.svg',
-  algocode: '/assets/img/logos/algocode.png',
-  algoclass: '/assets/img/logos/algoclass.png',
+  algocom: `${assetBase}assets/img/logos/algocom.svg`,
+  algoterm: `${assetBase}assets/img/logos/algoterm.svg`,
+  algogit: `${assetBase}assets/img/logos/algogit.svg`,
+  algopdf: `${assetBase}assets/img/logos/algopdf.svg`,
+  algocode: `${assetBase}assets/img/logos/algocode.png`,
+  algoclass: `${assetBase}assets/img/logos/algoclass.png`,
 } as const;
 
 const sharedProducts = [

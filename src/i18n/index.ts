@@ -1,12 +1,17 @@
 import { createI18n } from 'vue-i18n';
 
 import { contentByLocale } from '@data/content';
+import { getSitePathname } from '@composables/useSiteRoutes';
 import type { Locale } from '@/types/content';
 
 export const supportedLocales: readonly Locale[] = ['zh-CN', 'en'];
 
 export function getLocaleFromPath(pathname: string): Locale {
-  return pathname === '/en' || pathname.startsWith('/en/') ? 'en' : 'zh-CN';
+  const sitePathname = getSitePathname(pathname);
+
+  return sitePathname === '/en' || sitePathname.startsWith('/en/')
+    ? 'en'
+    : 'zh-CN';
 }
 
 const messages = contentByLocale as any;

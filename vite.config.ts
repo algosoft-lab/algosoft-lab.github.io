@@ -3,7 +3,16 @@ import { fileURLToPath, URL } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 
+function getBasePath(): string {
+  const configuredBasePath = process.env.VITE_BASE_PATH?.trim()
+
+  if (!configuredBasePath || configuredBasePath === '/') return '/'
+
+  return `/${configuredBasePath.replace(/^\/+|\/+$/g, '')}/`
+}
+
 export default defineConfig({
+  base: getBasePath(),
   plugins: [vue()],
   resolve: {
     alias: {

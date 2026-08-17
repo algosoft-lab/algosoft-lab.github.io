@@ -49,7 +49,7 @@ pnpm build 会生成包含首页和产品文档入口的 dist/ 静态站点：
 
 ## GitHub Pages 部署
 
-GitHub Actions 工作流位于 `.github/workflows/deploy-pages.yml`。将代码合并到 `publish` 分支后会自动执行 `pnpm install --frozen-lockfile`、类型检查、构建并部署 `dist/` 到 GitHub Pages，也可以从 Actions 页面手动触发。
+GitHub Actions 工作流位于 `.github/workflows/deploy-pages.yml`。将代码合并到 `publish` 分支后会自动执行 `pnpm install --frozen-lockfile`、类型检查、构建并部署 `dist/` 到 GitHub Pages，也可以从 Actions 页面手动触发。工作流会读取 GitHub Pages 的 `base_path`，因此同时支持项目站点路径（例如 `/algosoft-website/`）和自定义域名根路径。
 
 在仓库设置中将 Pages 的构建来源设置为 GitHub Actions；如果继续使用 `algosoft.cc`，还需要在 Pages 设置中配置自定义域名和 DNS。
 
