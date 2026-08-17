@@ -1,4 +1,4 @@
-export type Locale = 'zh' | 'en';
+export type Locale = 'zh-CN' | 'en';
 
 export interface Product {
   name: string;
@@ -14,6 +14,8 @@ export interface Product {
 export interface FaqItem {
   question: string;
   answer: string;
+  answerPrefix?: string;
+  answerSuffix?: string;
   answerLink?: {
     label: string;
     href: string;

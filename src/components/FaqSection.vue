@@ -20,10 +20,12 @@ defineProps<{ content: SiteContent }>();
         >
           <summary>{{ item.question }}</summary>
           <p>
-            {{ item.answer }}
-            <a v-if="item.answerLink" :href="item.answerLink.href">{{
-              item.answerLink.label
-            }}</a>
+            <template v-if="item.answerLink">
+              {{ item.answer }}
+              <a :href="item.answerLink.href">{{ item.answerLink.label }}</a
+              >{{ item.answerSuffix }}
+            </template>
+            <template v-else>{{ item.answer }}</template>
           </p>
         </details>
       </div>

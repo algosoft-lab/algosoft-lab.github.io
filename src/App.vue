@@ -8,11 +8,10 @@ import SiteFooter from '@components/SiteFooter.vue';
 import SiteHeader from '@components/SiteHeader.vue';
 import ProductSection from '@components/ProductSection.vue';
 import { useReveal } from '@composables/useReveal';
-import type { SiteContent } from '@/types/content';
-
-defineProps<{ content: SiteContent }>();
+import { useSiteContent } from '@composables/useSiteContent';
 
 useReveal();
+const { content } = useSiteContent();
 </script>
 
 <template>

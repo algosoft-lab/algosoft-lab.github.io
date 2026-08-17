@@ -44,7 +44,7 @@ const sharedProducts = [
 ] as const;
 
 const zhContent: SiteContent = {
-  locale: 'zh',
+  locale: 'zh-CN',
   htmlLang: 'zh-CN',
   alternateLocale: 'en',
   alternateLabel: 'EN',
@@ -164,8 +164,9 @@ const zhContent: SiteContent = {
       },
       {
         question: '在哪里下载这些软件？',
-        answer:
-          'AlgoCode 与 AlgoClass 可在 algocode.cc 下载。AlgoCOM、AlgoTerm、AlgoGit、AlgoPDF 尚未发布，敬请期待。',
+        answer: 'AlgoCode 与 AlgoClass 可在',
+        answerSuffix:
+          '下载。AlgoCOM、AlgoTerm、AlgoGit、AlgoPDF 尚未发布，敬请期待。',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
@@ -175,7 +176,8 @@ const zhContent: SiteContent = {
       },
       {
         question: '如何联系作者？',
-        answer: '可以通过邮箱 5266917@qq.com 联系作者。',
+        answer: '可以通过邮箱',
+        answerSuffix: '联系作者。',
         answerLink: { label: '5266917@qq.com', href: 'mailto:5266917@qq.com' },
       },
     ],
@@ -221,7 +223,7 @@ const zhContent: SiteContent = {
 const enContent: SiteContent = {
   locale: 'en',
   htmlLang: 'en',
-  alternateLocale: 'zh',
+  alternateLocale: 'zh-CN',
   alternateLabel: '中文',
   meta: {
     title: 'AlgoSoft — A family of tools built for developers',
@@ -344,8 +346,9 @@ const enContent: SiteContent = {
       },
       {
         question: 'Where can I download the software?',
-        answer:
-          'AlgoCode and AlgoClass can be downloaded from algocode.cc. AlgoCOM, AlgoTerm, AlgoGit and AlgoPDF are not released yet.',
+        answer: 'AlgoCode and AlgoClass can be downloaded from',
+        answerSuffix:
+          '. AlgoCOM, AlgoTerm, AlgoGit and AlgoPDF are not released yet.',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
@@ -356,7 +359,8 @@ const enContent: SiteContent = {
       },
       {
         question: 'How can I contact the author?',
-        answer: 'You can reach the author by email at 5266917@qq.com.',
+        answer: 'You can reach the author by email at',
+        answerSuffix: '.',
         answerLink: { label: '5266917@qq.com', href: 'mailto:5266917@qq.com' },
       },
     ],
@@ -403,7 +407,7 @@ const enContent: SiteContent = {
 };
 
 export const contentByLocale: Record<Locale, SiteContent> = {
-  zh: zhContent,
+  'zh-CN': zhContent,
   en: enContent,
 };
 

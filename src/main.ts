@@ -3,14 +3,11 @@ import 'element-plus/es/components/button/style/css';
 import 'element-plus/es/components/tag/style/css';
 
 import App from '@/App.vue';
-import { getContent } from '@data/content';
-import type { Locale } from '@/types/content';
+import { getLocaleFromPath, i18n } from '@/i18n';
 import '@styles/main.css';
 
-const locale: Locale = window.location.pathname.startsWith('/en') ? 'en' : 'zh';
-const content = getContent(locale);
+const locale = getLocaleFromPath(window.location.pathname);
+document.documentElement.lang = locale;
+document.title = i18n.global.t('meta.title');
 
-document.documentElement.lang = content.htmlLang;
-document.title = content.meta.title;
-
-createApp(App, { content }).mount('#app');
+createApp(App).use(i18n).mount('#app');
