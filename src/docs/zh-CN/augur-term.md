@@ -1,12 +1,12 @@
 ---
-title: Augur Term 使用文档
-description: Augur Term 是基于 Rust 和 GPUI 构建的跨平台 SSH 终端客户端，支持会话管理、SFTP、主题和加密凭据存储。
-product: Augur Term
+title: AlgoTerm 使用文档
+description: AlgoTerm 是基于 Rust 和 GPUI 构建的跨平台 SSH 终端客户端，支持会话管理、SFTP、主题和加密凭据存储。
+product: AlgoTerm
 ---
 
-# Augur Term 使用文档
+# AlgoTerm 使用文档
 
-Augur Term 是一款面向开发者和运维场景的桌面 SSH 终端客户端。它使用 Rust 编写，以 GPUI 构建桌面界面，以 `alacritty_terminal` 负责终端状态和 ANSI 渲染，并通过 `russh` 与远程服务器建立 SSH 连接。
+AlgoTerm 是一款面向开发者和运维场景的桌面 SSH 终端客户端。它使用 Rust 编写，以 GPUI 构建桌面界面，以 `alacritty_terminal` 负责终端状态和 ANSI 渲染，并通过 `russh` 与远程服务器建立 SSH 连接。
 
 它的核心目标是把远程终端、连接配置和常用文件操作放在一个轻量的深色工作区中：打开应用、解锁会话库、连接服务器，然后在标签页中完成终端操作或 SFTP 文件传输。
 
@@ -23,7 +23,7 @@ Augur Term 是一款面向开发者和运维场景的桌面 SSH 终端客户端�
 
 ```mermaid
 flowchart LR
-    A[启动 Augur Term] --> B{会话库状态}
+    A[启动 AlgoTerm] --> B{会话库状态}
     B -- 首次使用 --> C[设置主密码]
     B -- 已配置 --> D[输入主密码解锁]
     C --> E[打开工作区]
@@ -69,7 +69,7 @@ ssh-keygen -t ed25519 -f test_ssh_key -N ""
 cargo run --bin ssh_test_server -- test_ssh_key 2222
 ```
 
-然后在 Augur Term 中连接：
+然后在 AlgoTerm 中连接：
 
 ```text
 主机：127.0.0.1
@@ -159,7 +159,7 @@ cargo check --all-targets
 
 ## 常见问题
 
-### Augur Term 支持哪些认证方式？
+### AlgoTerm 支持哪些认证方式？
 
 当前会话模型和连接表单实现的是 SSH 密码认证。密钥认证等方式需要后续扩展，不应将当前版本描述为已经支持。
 

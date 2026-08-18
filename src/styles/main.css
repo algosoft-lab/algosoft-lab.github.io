@@ -688,6 +688,88 @@ a {
   padding: 132px 0 96px;
 }
 
+.docs-home-page {
+  min-height: calc(100vh - 260px);
+  padding: 150px 0 110px;
+}
+
+.docs-home-head {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.docs-home-title {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: -0.04em;
+}
+
+.docs-home-subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.docs-home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.docs-home-card {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.docs-home-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--cyan) 45%, var(--border));
+  background: var(--surface-2);
+}
+
+.docs-home-card-product {
+  margin-bottom: 16px;
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.docs-home-card h2 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.docs-home-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.docs-home-card-action {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
 .docs-breadcrumbs {
   display: flex;
   align-items: center;
@@ -1051,6 +1133,14 @@ a {
 
   .docs-page {
     padding: 112px 0 72px;
+  }
+
+  .docs-home-page {
+    padding: 124px 0 80px;
+  }
+
+  .docs-home-grid {
+    grid-template-columns: 1fr;
   }
 
   .docs-breadcrumbs {

@@ -1,12 +1,12 @@
 ---
-title: Augur Term Documentation
-description: Augur Term is a cross-platform SSH terminal client built with Rust and GPUI, with session management, SFTP, themes and encrypted credential storage.
-product: Augur Term
+title: AlgoTerm Documentation
+description: AlgoTerm is a cross-platform SSH terminal client built with Rust and GPUI, with session management, SFTP, themes and encrypted credential storage.
+product: AlgoTerm
 ---
 
-# Augur Term Documentation
+# AlgoTerm Documentation
 
-Augur Term is a desktop SSH terminal client for development and operations work. It is written in Rust, uses GPUI for the desktop interface, uses `alacritty_terminal` for terminal state and ANSI rendering, and connects to remote servers through `russh`.
+AlgoTerm is a desktop SSH terminal client for development and operations work. It is written in Rust, uses GPUI for the desktop interface, uses `alacritty_terminal` for terminal state and ANSI rendering, and connects to remote servers through `russh`.
 
 Its main idea is to keep the remote terminal, connection profiles and common file operations in one focused dark workspace: open the app, unlock the session vault, connect to a server, and work from terminal tabs or the SFTP panel.
 
@@ -23,7 +23,7 @@ Its main idea is to keep the remote terminal, connection profiles and common fil
 
 ```mermaid
 flowchart LR
-    A[Start Augur Term] --> B{Session vault}
+    A[Start AlgoTerm] --> B{Session vault}
     B -- First use --> C[Set a master password]
     B -- Already configured --> D[Enter the master password]
     C --> E[Open workspace]
@@ -54,7 +54,7 @@ cargo run
 
 1. Set a master password on first launch. It unlocks the local session vault and is not written to the database.
 2. Create a session in the left sidebar with a name, host, port and username.
-3. Double-click the session. If no password is stored, Augur Term asks for it before connecting.
+3. Double-click the session. If no password is stored, AlgoTerm asks for it before connecting.
 4. On the first connection to a host, compare and confirm the displayed SHA-256 host fingerprint.
 5. After the connection is ready, use the terminal tab for shell work. The SFTP panel becomes available when the server provides the SFTP subsystem.
 
@@ -69,7 +69,7 @@ ssh-keygen -t ed25519 -f test_ssh_key -N ""
 cargo run --bin ssh_test_server -- test_ssh_key 2222
 ```
 
-Connect from Augur Term with:
+Connect from AlgoTerm with:
 
 ```text
 Host: 127.0.0.1
@@ -115,7 +115,7 @@ This is application-level protection, not a replacement for operating-system per
 
 ## Themes, fonts and configuration
 
-Augur Term includes Augur Dark+, Catppuccin Latte, Frappé, Macchiato and Mocha. Put user themes in:
+AlgoTerm includes Augur Dark+, Catppuccin Latte, Frappé, Macchiato and Mocha. Put user themes in:
 
 ```text
 <config-dir>/augur-term/themes/*.json

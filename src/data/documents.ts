@@ -26,6 +26,7 @@ export interface SiteDocumentLink {
   slug: string;
   product: string;
   title: string;
+  description: string;
 }
 
 const documentCatalog: Record<Locale, readonly SiteDocumentLink[]> = {
@@ -34,11 +35,13 @@ const documentCatalog: Record<Locale, readonly SiteDocumentLink[]> = {
       slug: 'algocode',
       product: 'AlgoCode',
       title: 'AlgoCode 使用文档',
+      description: '介绍 AlgoCode 的定位、基础使用流程和常见问题。',
     },
     {
-      slug: 'augur-term',
-      product: 'Augur Term',
-      title: 'Augur Term 使用文档',
+      slug: 'algoterm',
+      product: 'AlgoTerm',
+      title: 'AlgoTerm 使用文档',
+      description: '介绍 SSH 连接、会话管理、SFTP、主题配置和开发验证。',
     },
   ],
   en: [
@@ -46,11 +49,15 @@ const documentCatalog: Record<Locale, readonly SiteDocumentLink[]> = {
       slug: 'algocode',
       product: 'AlgoCode',
       title: 'AlgoCode Documentation',
+      description:
+        'Learn the basics of AlgoCode, its workflow and common questions.',
     },
     {
-      slug: 'augur-term',
-      product: 'Augur Term',
-      title: 'Augur Term Documentation',
+      slug: 'algoterm',
+      product: 'AlgoTerm',
+      title: 'AlgoTerm Documentation',
+      description:
+        'Learn about SSH connections, sessions, SFTP, themes and development checks.',
     },
   ],
 };
@@ -185,7 +192,8 @@ function parseMarkdownSource(source: string): {
 }
 
 export function getSiteDocument(locale: Locale, slug: string): SiteDocument {
-  const sourcePath = `/src/docs/${locale}/${slug}.md`;
+  const sourceSlug = slug === 'algoterm' ? 'augur-term' : slug;
+  const sourcePath = `/src/docs/${locale}/${sourceSlug}.md`;
   const source = markdownFiles[sourcePath];
 
   if (!source) {

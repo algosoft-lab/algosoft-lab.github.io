@@ -29,8 +29,9 @@ AlgoSoft 官方产品家族官网，现已迁移为 Vite + Vue + TypeScript 7 �
 pnpm build 会生成包含首页和产品文档入口的 dist/ 静态站点：
 
 - `/` 与 `/en/`
+- `/docs/` 与 `/en/docs/`（产品文档首页）
 - `/docs/algocode/` 与 `/en/docs/algocode/`
-- `/docs/augur-term/` 与 `/en/docs/augur-term/`
+- `/docs/algoterm/` 与 `/en/docs/algoterm/`
 
 ## 目录结构
 

@@ -31,11 +31,23 @@ export function getSitePathname(pathname: string): string {
   return pathname.slice(basePath.length) || '/';
 }
 
+const documentSlugAliases: Record<string, string> = {
+  'augur-term': 'algoterm',
+};
+
+export function normalizeDocumentSlug(slug: string): string {
+  return documentSlugAliases[slug] ?? slug;
+}
+
 export function getDocumentSlugFromPath(pathname: string): string | null {
   const match = getSitePathname(pathname).match(
     /^\/(?:en\/)?docs\/([^/]+)\/?$/,
   );
-  return match?.[1] ?? null;
+  return match?.[1] ? normalizeDocumentSlug(match[1]) : null;
+}
+
+export function isDocsHomePath(pathname: string): boolean {
+  return /^\/(?:en\/)?docs\/?$/.test(getSitePathname(pathname));
 }
 
 export function getSiteRoutes(
@@ -45,8 +57,12 @@ export function getSiteRoutes(
   const home = withBase(locale === 'en' ? '/en/' : '/');
   const alternateHome = withBase(locale === 'en' ? '/' : '/en/');
   const slug = getDocumentSlugFromPath(pathname);
-  const docsPath = `${home}docs/${slug ?? 'algocode'}/`;
-  const alternate = slug ? `${alternateHome}docs/${slug}/` : alternateHome;
+  const docsPath = slug ? `${home}docs/${slug}/` : `${home}docs/`;
+  const alternate = slug
+    ? `${alternateHome}docs/${slug}/`
+    : isDocsHomePath(pathname)
+      ? `${alternateHome}docs/`
+      : alternateHome;
 
   return {
     home,

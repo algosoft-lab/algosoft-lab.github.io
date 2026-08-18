@@ -1,14 +1,14 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from 'node:url';
 
-import vue from '@vitejs/plugin-vue'
-import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue';
+import { defineConfig } from 'vite';
 
 function getBasePath(): string {
-  const configuredBasePath = process.env.VITE_BASE_PATH?.trim()
+  const configuredBasePath = process.env.VITE_BASE_PATH?.trim();
 
-  if (!configuredBasePath || configuredBasePath === '/') return '/'
+  if (!configuredBasePath || configuredBasePath === '/') return '/';
 
-  return `/${configuredBasePath.replace(/^\/+|\/+$/g, '')}/`
+  return `/${configuredBasePath.replace(/^\/+|\/+$/g, '')}/`;
 }
 
 export default defineConfig({
@@ -17,8 +17,12 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
-      '@composables': fileURLToPath(new URL('./src/composables', import.meta.url)),
+      '@components': fileURLToPath(
+        new URL('./src/components', import.meta.url),
+      ),
+      '@composables': fileURLToPath(
+        new URL('./src/composables', import.meta.url),
+      ),
       '@data': fileURLToPath(new URL('./src/data', import.meta.url)),
       '@docs': fileURLToPath(new URL('./src/docs', import.meta.url)),
       '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
@@ -30,6 +34,8 @@ export default defineConfig({
       input: {
         zh: fileURLToPath(new URL('./index.html', import.meta.url)),
         en: fileURLToPath(new URL('./en/index.html', import.meta.url)),
+        docs: fileURLToPath(new URL('./docs/index.html', import.meta.url)),
+        enDocs: fileURLToPath(new URL('./en/docs/index.html', import.meta.url)),
         docsAlgocode: fileURLToPath(
           new URL('./docs/algocode/index.html', import.meta.url),
         ),
@@ -42,7 +48,13 @@ export default defineConfig({
         enDocsAugurTerm: fileURLToPath(
           new URL('./en/docs/augur-term/index.html', import.meta.url),
         ),
+        docsAlgoTerm: fileURLToPath(
+          new URL('./docs/algoterm/index.html', import.meta.url),
+        ),
+        enDocsAlgoTerm: fileURLToPath(
+          new URL('./en/docs/algoterm/index.html', import.meta.url),
+        ),
       },
     },
   },
-})
+});
