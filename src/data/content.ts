@@ -96,6 +96,8 @@ const zhContent: SiteContent = {
           '分屏、主题、字体一键定制，配置随账号同步',
         ],
         category: '终端模拟',
+        docsUrl: `${assetBase}docs/augur-term/`,
+        docsLabel: '查看文档 →',
       },
       {
         ...sharedProducts[2],
@@ -277,6 +279,8 @@ const enContent: SiteContent = {
           'Split panes, themes and fonts, synced across devices',
         ],
         category: 'Terminal',
+        docsUrl: `${assetBase}en/docs/augur-term/`,
+        docsLabel: 'Read docs →',
       },
       {
         ...sharedProducts[2],

@@ -33,6 +33,9 @@ defineProps<{ product: Product }>();
         rel="noopener"
         >{{ product.siteLabel }}</a
       >
+      <a v-if="product.docsUrl" class="product-site" :href="product.docsUrl">
+        {{ product.docsLabel }}
+      </a>
     </div>
   </article>
 </template>

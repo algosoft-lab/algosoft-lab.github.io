@@ -30,6 +30,7 @@ pnpm build 会生成包含首页和产品文档入口的 dist/ 静态站点：
 
 - `/` 与 `/en/`
 - `/docs/algocode/` 与 `/en/docs/algocode/`
+- `/docs/augur-term/` 与 `/en/docs/augur-term/`
 
 ## 目录结构
 

@@ -3,7 +3,7 @@ import { nextTick, onMounted, ref } from 'vue';
 
 import SiteFooter from '@components/SiteFooter.vue';
 import SiteHeader from '@components/SiteHeader.vue';
-import { getSiteDocument } from '@data/documents';
+import { getSiteDocument, getSiteDocumentLinks } from '@data/documents';
 import { useSiteContent } from '@composables/useSiteContent';
 import {
   getDocumentSlugFromPath,
@@ -15,6 +15,7 @@ const { content } = useSiteContent();
 const locale = getLocaleFromPath(window.location.pathname);
 const slug = getDocumentSlugFromPath(window.location.pathname) ?? 'algocode';
 const siteDocument = getSiteDocument(locale, slug);
+const documentLinks = getSiteDocumentLinks(locale);
 const routes = getSiteRoutes(locale);
 const documentContent = ref<HTMLElement | null>(null);
 
@@ -100,20 +101,37 @@ onMounted(async () => {
 
       <div class="docs-layout">
         <aside class="docs-sidebar">
-          <p class="docs-sidebar-label">
-            {{ siteDocument.frontmatter.product }}
-          </p>
-          <nav :aria-label="content.navigation.docs">
-            <a
-              v-for="item in siteDocument.toc"
-              :key="item.id"
-              class="docs-toc-link"
-              :class="`docs-toc-level-${item.level}`"
-              :href="`#${item.id}`"
-            >
-              {{ item.title }}
-            </a>
-          </nav>
+          <section class="docs-sidebar-section">
+            <p class="docs-sidebar-label">{{ content.navigation.docs }}</p>
+            <nav :aria-label="content.navigation.docs">
+              <a
+                v-for="document in documentLinks"
+                :key="document.slug"
+                class="docs-document-link"
+                :class="{ active: document.slug === slug }"
+                :href="`${routes.home}docs/${document.slug}/`"
+              >
+                {{ document.title }}
+              </a>
+            </nav>
+          </section>
+
+          <section class="docs-sidebar-section">
+            <p class="docs-sidebar-label">
+              {{ siteDocument.frontmatter.product }}
+            </p>
+            <nav :aria-label="siteDocument.frontmatter.product">
+              <a
+                v-for="item in siteDocument.toc"
+                :key="item.id"
+                class="docs-toc-link"
+                :class="`docs-toc-level-${item.level}`"
+                :href="`#${item.id}`"
+              >
+                {{ item.title }}
+              </a>
+            </nav>
+          </section>
         </aside>
 
         <article

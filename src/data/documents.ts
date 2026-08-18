@@ -22,6 +22,45 @@ const markdownFiles = import.meta.glob<string>('/src/docs/**/*.md', {
   query: '?raw',
 });
 
+export interface SiteDocumentLink {
+  slug: string;
+  product: string;
+  title: string;
+}
+
+const documentCatalog: Record<Locale, readonly SiteDocumentLink[]> = {
+  'zh-CN': [
+    {
+      slug: 'algocode',
+      product: 'AlgoCode',
+      title: 'AlgoCode 使用文档',
+    },
+    {
+      slug: 'augur-term',
+      product: 'Augur Term',
+      title: 'Augur Term 使用文档',
+    },
+  ],
+  en: [
+    {
+      slug: 'algocode',
+      product: 'AlgoCode',
+      title: 'AlgoCode Documentation',
+    },
+    {
+      slug: 'augur-term',
+      product: 'Augur Term',
+      title: 'Augur Term Documentation',
+    },
+  ],
+};
+
+export function getSiteDocumentLinks(
+  locale: Locale,
+): readonly SiteDocumentLink[] {
+  return documentCatalog[locale];
+}
+
 function slugifyHeading(title: string): string {
   const slug = title
     .trim()

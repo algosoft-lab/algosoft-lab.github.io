@@ -36,6 +36,12 @@ export default defineConfig({
         enDocsAlgocode: fileURLToPath(
           new URL('./en/docs/algocode/index.html', import.meta.url),
         ),
+        docsAugurTerm: fileURLToPath(
+          new URL('./docs/augur-term/index.html', import.meta.url),
+        ),
+        enDocsAugurTerm: fileURLToPath(
+          new URL('./en/docs/augur-term/index.html', import.meta.url),
+        ),
       },
     },
   },

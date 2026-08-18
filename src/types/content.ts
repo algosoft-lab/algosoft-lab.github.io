@@ -9,6 +9,8 @@ export interface Product {
   category: string;
   url?: string;
   siteLabel?: string;
+  docsUrl?: string;
+  docsLabel?: string;
 }
 
 export interface FaqItem {

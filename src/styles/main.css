@@ -730,6 +730,12 @@ a {
   font-weight: 700;
 }
 
+.docs-sidebar-section + .docs-sidebar-section {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
 .docs-sidebar nav {
   display: grid;
   gap: 4px;
@@ -745,6 +751,20 @@ a {
 }
 
 .docs-toc-link:hover {
+  color: var(--cyan);
+}
+
+.docs-document-link {
+  display: block;
+  padding: 5px 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  transition: color 0.2s ease;
+}
+
+.docs-document-link:hover,
+.docs-document-link.active {
   color: var(--cyan);
 }
 
