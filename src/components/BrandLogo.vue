@@ -1,5 +1,9 @@
+<script setup lang="ts">
+withDefaults(defineProps<{ href?: string }>(), { href: '#top' });
+</script>
+
 <template>
-  <a class="nav-logo" href="#top" aria-label="AlgoSoft home">
+  <a class="nav-logo" :href="href" aria-label="AlgoSoft home">
     <svg
       class="logo-icon"
       viewBox="0 0 24 24"
