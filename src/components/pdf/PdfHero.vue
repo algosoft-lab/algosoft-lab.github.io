@@ -33,6 +33,14 @@ defineProps<{ content: PdfPageContent }>();
           rel="noopener"
           >{{ content.hero.primaryCta }}</ElButton
         >
+        <ElButton
+          v-if="content.hero.directUrl"
+          class="btn btn-ghost"
+          tag="a"
+          :href="content.hero.directUrl"
+          download
+          >{{ content.hero.directCta }}</ElButton
+        >
         <ElButton class="btn btn-ghost" tag="a" href="/">{{
           content.hero.secondaryCta
         }}</ElButton>

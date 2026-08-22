@@ -110,6 +110,8 @@ export interface PdfPageContent {
     primaryUrl: string;
     secondaryCta: string;
     note: string;
+    directCta?: string;
+    directUrl?: string;
   };
   features: {
     kicker: string;
