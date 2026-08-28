@@ -4,7 +4,7 @@ export const PDF_LOGO = '/assets/img/logos/algopdf.svg';
 
 export const PDF_STORE_URL = 'https://apps.microsoft.com/detail/9N9CJ9RKPW4S';
 
-export const PDF_SETUP_URL = '/downloads/AlgoPDF-1.0.2-Setup.exe';
+export const PDF_SETUP_URL = '/downloads/AlgoPDF-1.0.3-Setup.exe';
 
 const zhContent: PdfPageContent = {
   locale: 'zh-CN',
@@ -30,7 +30,7 @@ const zhContent: PdfPageContent = {
     secondaryCta: '返回 AlgoSoft 首页',
     directCta: '直接下载安装包',
     directUrl: PDF_SETUP_URL,
-    note: 'v1.0.2 · Windows 10 / 11 · 微软商店或本页直接下载',
+    note: 'v1.0.3 · Windows 10 / 11 · 微软商店或本页直接下载',
   },
   features: {
     kicker: '核心能力',
@@ -113,7 +113,7 @@ const enContent: PdfPageContent = {
     secondaryCta: 'Back to AlgoSoft',
     directCta: 'Download installer',
     directUrl: PDF_SETUP_URL,
-    note: 'v1.0.2 · Windows 10 / 11 · Microsoft Store or direct download',
+    note: 'v1.0.3 · Windows 10 / 11 · Microsoft Store or direct download',
   },
   features: {
     kicker: 'Core Features',
