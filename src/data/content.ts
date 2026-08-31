@@ -27,6 +27,7 @@ const sharedProducts = [
     name: 'AlgoGit',
     logo: productLogos.algogit,
     accent: 'red',
+    url: 'https://github.com/algosoft-lab/algo-git/releases/tag/nightly',
   },
   {
     name: 'AlgoPDF',
@@ -109,6 +110,7 @@ const zhContent: SiteContent = {
           '内置常用工作流，rebase / cherry-pick 不再高危',
         ],
         category: '版本控制',
+        siteLabel: '下载 Nightly →',
       },
       {
         ...sharedProducts[3],
@@ -174,7 +176,7 @@ const zhContent: SiteContent = {
         question: '在哪里下载这些软件？',
         answer: 'AlgoCode 与 AlgoClass 可在',
         answerSuffix:
-          '下载。AlgoPDF 可从 Microsoft Store 获取；AlgoCOM、AlgoTerm、AlgoGit 尚未发布，敬请期待。',
+          '下载。AlgoGit 可从其 GitHub 仓库 Releases 页面下载 Nightly 版本；AlgoPDF 可从 Microsoft Store 获取；AlgoCOM 与 AlgoTerm 尚未发布，敬请期待。',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
@@ -294,6 +296,7 @@ const enContent: SiteContent = {
           'Guided workflows make rebase / cherry-pick safe',
         ],
         category: 'Version Control',
+        siteLabel: 'Download Nightly →',
       },
       {
         ...sharedProducts[3],
@@ -361,7 +364,7 @@ const enContent: SiteContent = {
         question: 'Where can I download the software?',
         answer: 'AlgoCode and AlgoClass can be downloaded from',
         answerSuffix:
-          '. AlgoPDF is available on the Microsoft Store; AlgoCOM, AlgoTerm and AlgoGit are not released yet.',
+          '. AlgoGit offers nightly builds on the Releases page of its GitHub repository; AlgoPDF is available on the Microsoft Store; AlgoCOM and AlgoTerm are not released yet.',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
