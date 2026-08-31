@@ -1,25 +1,63 @@
 ---
 title: Augur Git Documentation
-description: Augur Git is a cross-platform desktop Git GUI client built with Rust and GPUI, with repository status, history, branches, diffs and revision comparison.
+description: Augur Git is a cross-platform, local-first, review-first Git client for AI-assisted development.
 product: Augur Git
 ---
 
 # Augur Git Documentation
 
-Augur Git is a cross-platform desktop Git GUI client for developers. It opens local Git repositories and presents repository status, branches, commit history, a commit graph and diffs. User-requested operations such as fetch, pull, push, checkout and commit are executed through the system Git executable.
+> Review the change. Decide what becomes history.
 
-Augur Git does not embed a Git implementation. Git must be installed on the system, and the `git` executable must be available on `PATH` for repository operations.
+Augur Git is a cross-platform, local-first, review-first Git client for AI-assisted development. It turns local repository changes into clear, navigable diffs so that a developer can understand, select and approve what should become part of the project's history before the next commit or push.
+
+Augur Git provides the review layer between the tools that create changes and the repository history that keeps them. The terminal runs the project, the editor handles focused corrections, and the coding agent produces larger changes. Augur Git works beside those tools rather than replacing them; it is not a coding agent, a code editor, a hosted pull-request platform or an automated judge of code quality.
+
+## Product definition
+
+Augur Git helps developers answer four questions:
+
+- What changed?
+- Why does the change matter?
+- Which parts should be kept, revised or discarded?
+- Is the repository ready for the next commit or push?
+
+These concepts define the product experience:
+
+- **Review-first**: diffs, changed files and repository context are the center of the interface, not a secondary view.
+- **Local-first**: local repositories are inspected through the system `git` executable, with no account requirement or hosted service required for review.
+- **Human in control**: repository-changing operations require an explicit user action and surface their result or error.
+- **Complementary workflow**: Augur Git works beside terminals, editors and coding agents while leaving the final judgment to the developer.
+
+## Recommended workflow
+
+```text
+Coding agent or editor
+          |
+          v
+   Working tree changes
+          |
+          v
+      Augur Git review
+          |
+          +----> Return issues to the editor or agent
+          |
+          v
+   Stage, commit and push
+```
 
 ## Feature overview
 
 - **Repository status**: See the current branch, ahead / behind counts, and staged or unstaged file changes.
-- **Working-tree actions**: Inspect per-file diffs for staged, unstaged and untracked files; stage or unstage files and groups; discard changes after confirmation.
-- **Commit graph**: Browse lane-based history and inspect commit hashes, messages, authors, relative dates and file diffs.
+- **Working-tree review**: Inspect per-file diffs for staged, unstaged and untracked files; stage or unstage files and groups; discard changes after confirmation.
+- **Native diff experience**: Navigate all changed files or one file with inline / side-by-side layouts, syntax-aware rendering and character-level change highlighting.
+- **Commit history**: Browse lane-based history and inspect commit hashes, messages, authors, relative dates and file diffs.
 - **Branches and refs**: Browse local branches, remotes, remote-tracking branches, tags and stashes from the sidebar.
 - **Remote operations**: Run Fetch, Pull (Merge or Rebase), Push and Force Push from the toolbar.
 - **Revision comparison**: Compare two branches, remote branches, tags or commit SHAs in a read-only workspace without checking out a revision.
 - **Multiple repository tabs**: Open several repositories at once; recent repositories are remembered.
 - **Themes and languages**: Use GitHub Dark or Catppuccin themes, with English and Simplified Chinese UI translations.
+
+Augur Git does not embed a Git implementation. Git must be installed on the system, and the `git` executable must be available on `PATH` for repository operations.
 
 ## Download and run
 

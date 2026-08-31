@@ -42,7 +42,7 @@ defineProps<{ content: SiteContent }>();
         ><code><span class="t-prompt">$</span> algosoft --list --all
 <span class="t-ok">●</span> AlgoCOM    <span class="t-dim">{{ content.locale === 'zh' ? 'serial communication' : 'serial communication' }}</span>
 <span class="t-ok">●</span> AlgoTerm   <span class="t-dim">terminal emulator</span>
-<span class="t-ok">●</span> Augur Git  <span class="t-dim">git client</span>
+<span class="t-ok">●</span> Augur Git  <span class="t-dim">review-first git client</span>
 <span class="t-ok">●</span> AlgoPDF    <span class="t-dim">pdf toolkit</span>
 <span class="t-ok">●</span> AlgoCode   <span class="t-dim">code editor</span>
 <span class="t-ok">●</span> AlgoClass  <span class="t-dim">coding classroom</span>

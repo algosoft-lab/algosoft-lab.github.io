@@ -55,7 +55,7 @@ const zhContent: SiteContent = {
   meta: {
     title: 'AlgoSoft — 为开发者打造的工具家族',
     description:
-      'AlgoSoft 旗下产品：AlgoCOM、AlgoTerm、Augur Git、AlgoPDF、AlgoCode 与 AlgoClass，为开发者打造的算法级工具家族。',
+      'AlgoSoft 旗下产品：AlgoCOM、AlgoTerm、Augur Git、AlgoPDF、AlgoCode 与 AlgoClass。Augur Git 是面向本地 AI 辅助开发、以代码审查为先的 Git 客户端。',
     canonical: 'https://algosoft.cc/',
   },
   navigation: {
@@ -103,13 +103,13 @@ const zhContent: SiteContent = {
       },
       {
         ...sharedProducts[2],
-        tagline: '所见即所得的 Git 客户端，版本历史一目了然。',
+        tagline: '面向 AI 辅助开发、以代码审查为先的本地优先 Git 客户端。',
         features: [
-          '分支图谱可视化，提交记录随意检视',
-          '暂存、比对、解决冲突，全部图形化操作',
-          '内置常用工作流，rebase / cherry-pick 不再高危',
+          '把工作区变更转化为清晰、可导航的差异',
+          '行内 / 并排布局、语法感知和字符级变更高亮',
+          '与终端、编辑器和编码代理协作，提交前由人做决定',
         ],
-        category: '版本控制',
+        category: '代码审查',
         siteLabel: '下载 Nightly →',
         docsUrl: `${assetBase}docs/augur-git/`,
         docsLabel: '查看文档 →',
@@ -162,7 +162,7 @@ const zhContent: SiteContent = {
       {
         question: 'AlgoCOM、AlgoTerm、Augur Git、AlgoPDF 分别是做什么的？',
         answer:
-          'AlgoCOM 是串口通信与调试工具，AlgoTerm 是终端模拟器，Augur Git 是 Git 图形化客户端，AlgoPDF 是让 PDF 像 PPT 一样放映的本地播放器。',
+          'AlgoCOM 是串口通信与调试工具，AlgoTerm 是终端模拟器，Augur Git 是面向本地 AI 辅助开发、以代码审查为先的 Git 客户端，AlgoPDF 是让 PDF 像 PPT 一样放映的本地播放器。',
       },
       {
         question: 'AlgoCode 和 AlgoClass 是什么关系？',
@@ -240,7 +240,7 @@ const enContent: SiteContent = {
   meta: {
     title: 'AlgoSoft — A family of tools built for developers',
     description:
-      'Products by AlgoSoft: AlgoCOM, AlgoTerm, Augur Git, AlgoPDF, AlgoCode and AlgoClass — a family of algorithm-grade tools for developers.',
+      'Products by AlgoSoft: AlgoCOM, AlgoTerm, Augur Git, AlgoPDF, AlgoCode and AlgoClass. Augur Git is a local-first, review-first Git client for AI-assisted development.',
     canonical: 'https://algosoft.cc/en/',
   },
   navigation: {
@@ -291,13 +291,14 @@ const enContent: SiteContent = {
       },
       {
         ...sharedProducts[2],
-        tagline: 'A visual Git client where history is crystal clear.',
+        tagline:
+          'A local-first, review-first Git client for AI-assisted development.',
         features: [
-          'Visual branch graph, inspect any commit',
-          'Staging, diffing and conflict resolution, all graphical',
-          'Guided workflows make rebase / cherry-pick safe',
+          'Turn working-tree changes into clear, navigable diffs',
+          'Inline / side-by-side layouts, syntax-aware and character-level highlighting',
+          'Works beside terminals, editors and coding agents, keeping the human in control',
         ],
-        category: 'Version Control',
+        category: 'Code Review',
         siteLabel: 'Download Nightly →',
         docsUrl: `${assetBase}en/docs/augur-git/`,
         docsLabel: 'Read docs →',
@@ -352,7 +353,7 @@ const enContent: SiteContent = {
       {
         question: 'What do AlgoCOM, AlgoTerm, Augur Git and AlgoPDF do?',
         answer:
-          'AlgoCOM is a serial communication and debugging tool, AlgoTerm is a terminal emulator, Augur Git is a visual Git client, and AlgoPDF is a local PDF player that presents PDFs like slides.',
+          'AlgoCOM is a serial communication and debugging tool, AlgoTerm is a terminal emulator, Augur Git is a local-first, review-first Git client for AI-assisted development, and AlgoPDF is a local PDF player that presents PDFs like slides.',
       },
       {
         question: 'What is the relationship between AlgoCode and AlgoClass?',

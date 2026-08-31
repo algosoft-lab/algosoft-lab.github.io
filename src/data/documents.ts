@@ -47,7 +47,8 @@ const documentCatalog: Record<Locale, readonly SiteDocumentLink[]> = {
       slug: 'augur-git',
       product: 'Augur Git',
       title: 'Augur Git 使用文档',
-      description: '介绍仓库状态、提交历史、分支操作、差异查看和版本比较。',
+      description:
+        '了解面向本地 AI 辅助开发、以代码审查为先的 Git 工作流，以及差异、历史和版本比较。',
     },
   ],
   en: [
@@ -70,7 +71,7 @@ const documentCatalog: Record<Locale, readonly SiteDocumentLink[]> = {
       product: 'Augur Git',
       title: 'Augur Git Documentation',
       description:
-        'Learn about repository status, history, branches, diffs and revision comparison.',
+        'Learn about the review-first Git workflow for local, AI-assisted development.',
     },
   ],
 };
