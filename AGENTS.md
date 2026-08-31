@@ -5,6 +5,10 @@
 - This project uses Prettier. Before committing, run `pnpm format` by default.
 - This project does not use ESLint. Before committing, run `tsc` to check for TypeScript errors.
 
+## Testing
+
+- Do not run tests or launch dev/preview servers proactively. Only do so when the user explicitly asks for it.
+
 ## Language
 
 - Write all new documentation, comments, and logs in English.
