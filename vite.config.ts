@@ -1,7 +1,56 @@
 import { fileURLToPath, URL } from 'node:url';
 
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+import type { ServerResponse } from 'node:http';
+
 import vue from '@vitejs/plugin-vue';
-import { defineConfig } from 'vite';
+import { defineConfig, type Connect, type Plugin } from 'vite';
+
+/**
+ * Redirects extension-less directory paths to their trailing-slash form
+ * (e.g. /algopdf -> /algopdf/), mirroring the 301 behaviour of static
+ * hosts in production. Without it the dev/preview SPA fallback serves
+ * the root index.html for multi-page entries.
+ */
+function directoryTrailingSlashRedirect(): Plugin {
+  function middleware(getBaseDir: () => string) {
+    return (
+      req: Connect.IncomingMessage,
+      res: ServerResponse,
+      next: Connect.NextFunction,
+    ): void => {
+      const method = req.method ?? 'GET';
+      if (method !== 'GET' && method !== 'HEAD') return next();
+
+      let url: URL;
+      try {
+        url = new URL(req.url ?? '/', 'http://localhost');
+      } catch {
+        return next();
+      }
+
+      const { pathname } = url;
+      if (pathname.endsWith('/') || path.posix.extname(pathname) !== '') return next();
+
+      if (!existsSync(path.join(getBaseDir(), pathname, 'index.html'))) return next();
+
+      res.statusCode = 301;
+      res.setHeader('Location', `${pathname}/${url.search}`);
+      res.end();
+    };
+  }
+
+  return {
+    name: 'directory-trailing-slash-redirect',
+    configureServer(server) {
+      server.middlewares.use(middleware(() => server.config.root));
+    },
+    configurePreviewServer(server) {
+      server.middlewares.use(middleware(() => server.config.build.outDir));
+    },
+  };
+}
 
 function getBasePath(): string {
   const configuredBasePath = process.env.VITE_BASE_PATH?.trim();
@@ -13,7 +62,7 @@ function getBasePath(): string {
 
 export default defineConfig({
   base: getBasePath(),
-  plugins: [vue()],
+  plugins: [vue(), directoryTrailingSlashRedirect()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

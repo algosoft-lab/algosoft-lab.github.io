@@ -15,7 +15,7 @@ function getBasePath(): string {
   return basePath === '/' ? '/' : basePath.replace(/\/$/, '');
 }
 
-function withBase(path: string): string {
+export function withBase(path: string): string {
   const basePath = getBasePath();
 
   return basePath === '/' ? path : `${basePath}${path}`;

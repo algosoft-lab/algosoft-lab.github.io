@@ -1,3 +1,4 @@
+import { withBase } from '@composables/useSiteRoutes';
 import type { Locale, SiteContent } from '@/types/content';
 
 const assetBase = import.meta.env.BASE_URL;
@@ -118,7 +119,7 @@ const zhContent: SiteContent = {
           '画笔批注实时同步放映屏，翻页自动清屏',
         ],
         category: 'PDF 放映',
-        url: '/algopdf',
+        url: withBase('/algopdf/'),
         siteLabel: '了解详情 →',
       },
       {
@@ -303,7 +304,7 @@ const enContent: SiteContent = {
           'Live pen annotations, cleared on every page turn',
         ],
         category: 'PDF Playback',
-        url: '/algopdf',
+        url: withBase('/algopdf/'),
         siteLabel: 'Learn more →',
       },
       {

@@ -2,9 +2,11 @@
 import { ElButton } from 'element-plus';
 
 import { PDF_LOGO } from '@data/pdfContent';
+import { getSiteRoutes } from '@composables/useSiteRoutes';
 import type { PdfPageContent } from '@/types/content';
 
-defineProps<{ content: PdfPageContent }>();
+const props = defineProps<{ content: PdfPageContent }>();
+const homeHref = getSiteRoutes(props.content.locale).home;
 </script>
 
 <template>
@@ -44,7 +46,7 @@ defineProps<{ content: PdfPageContent }>();
           download
           >{{ content.hero.directCta }}</ElButton
         >
-        <ElButton class="btn btn-ghost" tag="a" href="/">{{
+        <ElButton class="btn btn-ghost" tag="a" :href="homeHref">{{
           content.hero.secondaryCta
         }}</ElButton>
       </div>

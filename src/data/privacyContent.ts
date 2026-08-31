@@ -1,3 +1,4 @@
+import { withBase } from '@composables/useSiteRoutes';
 import type { Locale, PrivacyPageContent } from '@/types/content';
 
 const CONTACT_EMAIL = '5266917@qq.com';
@@ -5,18 +6,18 @@ const CONTACT_EMAIL = '5266917@qq.com';
 const zhContent: PrivacyPageContent = {
   locale: 'zh-CN',
   htmlLang: 'zh-CN',
-  alternatePath: '/en/algopdf/privacy',
+  alternatePath: withBase('/en/algopdf/privacy/'),
   alternateLabel: 'EN',
   meta: {
     title: 'AlgoPDF 隐私政策 | AlgoSoft',
     description:
       'AlgoPDF 不收集、不传输、不共享任何个人信息：无账号、无遥测、无广告，所有 PDF 均在本地解析渲染。',
-    canonical: 'https://algosoft.cc/algopdf/privacy',
+    canonical: 'https://algosoft.cc/algopdf/privacy/',
   },
   nav: {
     home: 'AlgoSoft 首页',
     product: 'AlgoPDF 产品页',
-    productPath: '/algopdf',
+    productPath: withBase('/algopdf/'),
   },
   hero: {
     kicker: 'AlgoPDF · 隐私政策',
@@ -76,7 +77,7 @@ const zhContent: PrivacyPageContent = {
   footer: {
     backHome: '返回 AlgoSoft 首页',
     product: 'AlgoPDF 产品页',
-    productPath: '/algopdf',
+    productPath: withBase('/algopdf/'),
     copyright: '© 2026 AlgoSoft',
   },
 };
@@ -84,18 +85,18 @@ const zhContent: PrivacyPageContent = {
 const enContent: PrivacyPageContent = {
   locale: 'en',
   htmlLang: 'en',
-  alternatePath: '/algopdf/privacy',
+  alternatePath: withBase('/algopdf/privacy/'),
   alternateLabel: '中文',
   meta: {
     title: 'AlgoPDF Privacy Policy | AlgoSoft',
     description:
       'AlgoPDF collects, transmits, and shares no personal information: no accounts, no telemetry, no ads — every PDF is parsed and rendered locally.',
-    canonical: 'https://algosoft.cc/en/algopdf/privacy',
+    canonical: 'https://algosoft.cc/en/algopdf/privacy/',
   },
   nav: {
     home: 'AlgoSoft home',
     product: 'AlgoPDF product page',
-    productPath: '/en/algopdf',
+    productPath: withBase('/en/algopdf/'),
   },
   hero: {
     kicker: 'AlgoPDF · Privacy Policy',
@@ -156,7 +157,7 @@ const enContent: PrivacyPageContent = {
   footer: {
     backHome: 'Back to AlgoSoft home',
     product: 'AlgoPDF product page',
-    productPath: '/en/algopdf',
+    productPath: withBase('/en/algopdf/'),
     copyright: '© 2026 AlgoSoft',
   },
 };
