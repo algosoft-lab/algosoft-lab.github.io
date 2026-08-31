@@ -26,6 +26,12 @@ defineProps<{ product: Product }>();
     <div class="product-tags">
       <ElTag class="chip" effect="plain">{{ product.category }}</ElTag>
       <a
+        v-if="product.productUrl"
+        class="product-site"
+        :href="product.productUrl"
+        >{{ product.productLabel }}</a
+      >
+      <a
         v-if="product.url"
         class="product-site"
         :href="product.url"

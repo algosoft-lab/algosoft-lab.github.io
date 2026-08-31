@@ -9,6 +9,8 @@ export interface Product {
   category: string;
   url?: string;
   siteLabel?: string;
+  productUrl?: string;
+  productLabel?: string;
   docsUrl?: string;
   docsLabel?: string;
 }
@@ -136,6 +138,90 @@ export interface PdfPageContent {
     backHome: string;
     privacyLabel: string;
     privacyPath: string;
+    copyright: string;
+  };
+}
+
+export interface AugurFeature {
+  title: string;
+  description: string;
+  accent: string;
+}
+
+export interface AugurWorkflowStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface AugurScreenshot {
+  title: string;
+  description: string;
+  placeholder: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+export interface AugurPageContent {
+  locale: Locale;
+  htmlLang: string;
+  alternatePath: string;
+  alternateLabel: string;
+  meta: {
+    title: string;
+    description: string;
+    canonical: string;
+  };
+  nav: {
+    home: string;
+  };
+  hero: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    primaryCta: string;
+    primaryUrl: string;
+    secondaryCta: string;
+    secondaryUrl: string;
+    note: string;
+    visualLabel: string;
+  };
+  intro: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    paragraphs: readonly string[];
+  };
+  features: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    items: readonly AugurFeature[];
+  };
+  workflow: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    steps: readonly AugurWorkflowStep[];
+  };
+  screenshots: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    items: readonly AugurScreenshot[];
+  };
+  cta: {
+    title: string;
+    subtitle: string;
+    action: string;
+    actionUrl: string;
+  };
+  footer: {
+    backHome: string;
+    docsLabel: string;
+    docsPath: string;
+    githubLabel: string;
+    githubUrl: string;
     copyright: string;
   };
 }

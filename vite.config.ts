@@ -109,6 +109,12 @@ export default defineConfig({
         enDocsAugurGit: fileURLToPath(
           new URL('./en/docs/augur-git/index.html', import.meta.url),
         ),
+        augurGitZh: fileURLToPath(
+          new URL('./augur-git/index.html', import.meta.url),
+        ),
+        augurGitEn: fileURLToPath(
+          new URL('./en/augur-git/index.html', import.meta.url),
+        ),
         pdfZh: fileURLToPath(new URL('./algopdf/index.html', import.meta.url)),
         pdfEn: fileURLToPath(
           new URL('./en/algopdf/index.html', import.meta.url),
