@@ -43,6 +43,12 @@ const documentCatalog: Record<Locale, readonly SiteDocumentLink[]> = {
       title: 'AlgoTerm 使用文档',
       description: '介绍 SSH 连接、会话管理、SFTP、主题配置和开发验证。',
     },
+    {
+      slug: 'augur-git',
+      product: 'Augur Git',
+      title: 'Augur Git 使用文档',
+      description: '介绍仓库状态、提交历史、分支操作、差异查看和版本比较。',
+    },
   ],
   en: [
     {
@@ -58,6 +64,13 @@ const documentCatalog: Record<Locale, readonly SiteDocumentLink[]> = {
       title: 'AlgoTerm Documentation',
       description:
         'Learn about SSH connections, sessions, SFTP, themes and development checks.',
+    },
+    {
+      slug: 'augur-git',
+      product: 'Augur Git',
+      title: 'Augur Git Documentation',
+      description:
+        'Learn about repository status, history, branches, diffs and revision comparison.',
     },
   ],
 };

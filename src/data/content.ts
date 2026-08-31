@@ -6,7 +6,7 @@ const assetBase = import.meta.env.BASE_URL;
 const productLogos = {
   algocom: `${assetBase}assets/img/logos/algocom.svg`,
   algoterm: `${assetBase}assets/img/logos/algoterm.svg`,
-  algogit: `${assetBase}assets/img/logos/algogit.svg`,
+  augurGit: `${assetBase}assets/img/logos/augur-git.svg`,
   algopdf: `${assetBase}assets/img/logos/algopdf.svg`,
   algocode: `${assetBase}assets/img/logos/algocode.png`,
   algoclass: `${assetBase}assets/img/logos/algoclass.png`,
@@ -24,10 +24,10 @@ const sharedProducts = [
     accent: 'emerald',
   },
   {
-    name: 'AlgoGit',
-    logo: productLogos.algogit,
+    name: 'Augur Git',
+    logo: productLogos.augurGit,
     accent: 'red',
-    url: 'https://github.com/algosoft-lab/algo-git/releases/tag/nightly',
+    url: 'https://github.com/algosoft-lab/augur-git/releases/tag/nightly',
   },
   {
     name: 'AlgoPDF',
@@ -55,7 +55,7 @@ const zhContent: SiteContent = {
   meta: {
     title: 'AlgoSoft — 为开发者打造的工具家族',
     description:
-      'AlgoSoft 旗下产品：AlgoCOM、AlgoTerm、AlgoGit、AlgoPDF、AlgoCode 与 AlgoClass，为开发者打造的算法级工具家族。',
+      'AlgoSoft 旗下产品：AlgoCOM、AlgoTerm、Augur Git、AlgoPDF、AlgoCode 与 AlgoClass，为开发者打造的算法级工具家族。',
     canonical: 'https://algosoft.cc/',
   },
   navigation: {
@@ -111,6 +111,8 @@ const zhContent: SiteContent = {
         ],
         category: '版本控制',
         siteLabel: '下载 Nightly →',
+        docsUrl: `${assetBase}docs/augur-git/`,
+        docsLabel: '查看文档 →',
       },
       {
         ...sharedProducts[3],
@@ -155,12 +157,12 @@ const zhContent: SiteContent = {
       {
         question: 'AlgoSoft 是什么？',
         answer:
-          'AlgoSoft 是一个开发者工具品牌，旗下有六款产品：AlgoCOM、AlgoTerm、AlgoGit、AlgoPDF、AlgoCode 与 AlgoClass。',
+          'AlgoSoft 是一个开发者工具品牌，旗下有六款产品：AlgoCOM、AlgoTerm、Augur Git、AlgoPDF、AlgoCode 与 AlgoClass。',
       },
       {
-        question: 'AlgoCOM、AlgoTerm、AlgoGit、AlgoPDF 分别是做什么的？',
+        question: 'AlgoCOM、AlgoTerm、Augur Git、AlgoPDF 分别是做什么的？',
         answer:
-          'AlgoCOM 是串口通信与调试工具，AlgoTerm 是终端模拟器，AlgoGit 是 Git 图形化客户端，AlgoPDF 是让 PDF 像 PPT 一样放映的本地播放器。',
+          'AlgoCOM 是串口通信与调试工具，AlgoTerm 是终端模拟器，Augur Git 是 Git 图形化客户端，AlgoPDF 是让 PDF 像 PPT 一样放映的本地播放器。',
       },
       {
         question: 'AlgoCode 和 AlgoClass 是什么关系？',
@@ -170,13 +172,13 @@ const zhContent: SiteContent = {
       {
         question: '这些软件收费吗？',
         answer:
-          'AlgoCode 与 AlgoClass 免费使用，AlgoPDF 即将登陆 Microsoft Store。AlgoCOM、AlgoTerm、AlgoGit 尚未发布，定价以后续公告为准。',
+          'AlgoCode 与 AlgoClass 免费使用，AlgoPDF 即将登陆 Microsoft Store。AlgoCOM 与 AlgoTerm 尚未发布；Augur Git 提供 Nightly 版本，其他产品的定价以后续公告为准。',
       },
       {
         question: '在哪里下载这些软件？',
         answer: 'AlgoCode 与 AlgoClass 可在',
         answerSuffix:
-          '下载。AlgoGit 可从其 GitHub 仓库 Releases 页面下载 Nightly 版本；AlgoPDF 可从 Microsoft Store 获取；AlgoCOM 与 AlgoTerm 尚未发布，敬请期待。',
+          '下载。Augur Git 可从其 GitHub Releases 页面下载 Nightly 版本；AlgoPDF 可从 Microsoft Store 获取；AlgoCOM 与 AlgoTerm 尚未发布，敬请期待。',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
@@ -238,7 +240,7 @@ const enContent: SiteContent = {
   meta: {
     title: 'AlgoSoft — A family of tools built for developers',
     description:
-      'Products by AlgoSoft: AlgoCOM, AlgoTerm, AlgoGit, AlgoPDF, AlgoCode and AlgoClass — a family of algorithm-grade tools for developers.',
+      'Products by AlgoSoft: AlgoCOM, AlgoTerm, Augur Git, AlgoPDF, AlgoCode and AlgoClass — a family of algorithm-grade tools for developers.',
     canonical: 'https://algosoft.cc/en/',
   },
   navigation: {
@@ -297,6 +299,8 @@ const enContent: SiteContent = {
         ],
         category: 'Version Control',
         siteLabel: 'Download Nightly →',
+        docsUrl: `${assetBase}en/docs/augur-git/`,
+        docsLabel: 'Read docs →',
       },
       {
         ...sharedProducts[3],
@@ -343,12 +347,12 @@ const enContent: SiteContent = {
       {
         question: 'What is AlgoSoft?',
         answer:
-          'AlgoSoft is a developer-tools brand with six products: AlgoCOM, AlgoTerm, AlgoGit, AlgoPDF, AlgoCode and AlgoClass.',
+          'AlgoSoft is a developer-tools brand with six products: AlgoCOM, AlgoTerm, Augur Git, AlgoPDF, AlgoCode and AlgoClass.',
       },
       {
-        question: 'What do AlgoCOM, AlgoTerm, AlgoGit and AlgoPDF do?',
+        question: 'What do AlgoCOM, AlgoTerm, Augur Git and AlgoPDF do?',
         answer:
-          'AlgoCOM is a serial communication and debugging tool, AlgoTerm is a terminal emulator, AlgoGit is a visual Git client, and AlgoPDF is a local PDF player that presents PDFs like slides.',
+          'AlgoCOM is a serial communication and debugging tool, AlgoTerm is a terminal emulator, Augur Git is a visual Git client, and AlgoPDF is a local PDF player that presents PDFs like slides.',
       },
       {
         question: 'What is the relationship between AlgoCode and AlgoClass?',
@@ -358,13 +362,13 @@ const enContent: SiteContent = {
       {
         question: 'Are these products free?',
         answer:
-          'AlgoCode and AlgoClass are free to use, and AlgoPDF is coming soon to the Microsoft Store. AlgoCOM, AlgoTerm and AlgoGit are not released yet; pricing will be announced later.',
+          'AlgoCode and AlgoClass are free to use, and AlgoPDF is coming soon to the Microsoft Store. AlgoCOM and AlgoTerm are not released yet; Augur Git offers nightly builds, and pricing for other products will be announced later.',
       },
       {
         question: 'Where can I download the software?',
         answer: 'AlgoCode and AlgoClass can be downloaded from',
         answerSuffix:
-          '. AlgoGit offers nightly builds on the Releases page of its GitHub repository; AlgoPDF is available on the Microsoft Store; AlgoCOM and AlgoTerm are not released yet.',
+          '. Augur Git offers nightly builds on its GitHub Releases page; AlgoPDF is available on the Microsoft Store; AlgoCOM and AlgoTerm are not released yet.',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {

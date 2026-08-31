@@ -103,6 +103,12 @@ export default defineConfig({
         enDocsAlgoTerm: fileURLToPath(
           new URL('./en/docs/algoterm/index.html', import.meta.url),
         ),
+        docsAugurGit: fileURLToPath(
+          new URL('./docs/augur-git/index.html', import.meta.url),
+        ),
+        enDocsAugurGit: fileURLToPath(
+          new URL('./en/docs/augur-git/index.html', import.meta.url),
+        ),
         pdfZh: fileURLToPath(new URL('./algopdf/index.html', import.meta.url)),
         pdfEn: fileURLToPath(
           new URL('./en/algopdf/index.html', import.meta.url),
