@@ -1193,3 +1193,142 @@ a {
     animation: none;
   }
 }
+
+/* ===== AlgoPDF product page ===== */
+.pdf-hero {
+  text-align: center;
+}
+
+.pdf-hero-inner {
+  align-items: center;
+  text-align: center;
+}
+
+.pdf-hero-logo {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 12px 32px rgb(124 58 237 / 0.35));
+}
+
+.pdf-note {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.pdf-feature-card {
+  min-height: 0;
+  padding: 22px;
+}
+
+.pdf-feature-title {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.pdf-feature-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.pdf-scenes {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.pdf-scenes-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pdf-scenes-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pdf-scenes-list li {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--surface);
+}
+
+/* Privacy policy page */
+.privacy-head {
+  margin-bottom: 36px;
+}
+
+.privacy-updated {
+  margin: 16px 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.privacy-list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.privacy-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  transition: border-color 0.2s ease;
+}
+
+.privacy-item:hover {
+  border-color: var(--border-strong);
+}
+
+.privacy-item h2 {
+  margin: 0 0 10px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.privacy-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.privacy-item p + p {
+  margin-top: 8px;
+}
+
+.privacy-item p.privacy-path {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.07);
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.privacy-item a {
+  color: var(--cyan);
+}

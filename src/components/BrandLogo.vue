@@ -1,7 +1,5 @@
 <script setup lang="ts">
-withDefaults(defineProps<{ href?: string }>(), {
-  href: '#top',
-});
+withDefaults(defineProps<{ href?: string }>(), { href: '#top' });
 </script>
 
 <template>

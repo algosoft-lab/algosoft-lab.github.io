@@ -85,3 +85,92 @@ export interface SiteContent {
     copyright: string;
   };
 }
+
+export interface PdfFeature {
+  title: string;
+  description: string;
+  accent: string;
+}
+
+export interface PdfPageContent {
+  locale: Locale;
+  htmlLang: string;
+  alternatePath: string;
+  alternateLabel: string;
+  meta: {
+    title: string;
+    description: string;
+    canonical: string;
+  };
+  nav: {
+    home: string;
+  };
+  hero: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    primaryCta: string;
+    primaryUrl: string;
+    secondaryCta: string;
+    note: string;
+    directCta?: string;
+    directUrl?: string;
+  };
+  features: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    items: readonly PdfFeature[];
+  };
+  scenes: {
+    label: string;
+    items: readonly string[];
+  };
+  cta: {
+    title: string;
+    subtitle: string;
+    action: string;
+    actionUrl: string;
+  };
+  footer: {
+    backHome: string;
+    privacyLabel: string;
+    privacyPath: string;
+    copyright: string;
+  };
+}
+
+export interface PrivacySection {
+  heading: string;
+  paragraphs: readonly string[];
+}
+
+export interface PrivacyPageContent {
+  locale: Locale;
+  htmlLang: string;
+  alternatePath: string;
+  alternateLabel: string;
+  meta: {
+    title: string;
+    description: string;
+    canonical: string;
+  };
+  nav: {
+    home: string;
+    product: string;
+    productPath: string;
+  };
+  hero: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    updated: string;
+  };
+  sections: readonly PrivacySection[];
+  footer: {
+    backHome: string;
+    product: string;
+    productPath: string;
+    copyright: string;
+  };
+}

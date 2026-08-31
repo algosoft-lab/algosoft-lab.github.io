@@ -54,6 +54,16 @@ export default defineConfig({
         enDocsAlgoTerm: fileURLToPath(
           new URL('./en/docs/algoterm/index.html', import.meta.url),
         ),
+        pdfZh: fileURLToPath(new URL('./algopdf/index.html', import.meta.url)),
+        pdfEn: fileURLToPath(
+          new URL('./en/algopdf/index.html', import.meta.url),
+        ),
+        privacyZh: fileURLToPath(
+          new URL('./algopdf/privacy/index.html', import.meta.url),
+        ),
+        privacyEn: fileURLToPath(
+          new URL('./en/algopdf/privacy/index.html', import.meta.url),
+        ),
       },
     },
   },

@@ -111,13 +111,15 @@ const zhContent: SiteContent = {
       },
       {
         ...sharedProducts[3],
-        tagline: '顺手的 PDF 工具箱，常见操作一步到位。',
+        tagline: '让 PDF 像 PPT 一样放映的本地播放器。',
         features: [
-          '合并、拆分、旋转、提取页面',
-          'PDF 与 Office / 图片互转，保真排版',
-          '本地处理，文件不出设备，隐私零顾虑',
+          '第二块屏幕全屏放映，翻页实时联动',
+          '双页 / 缩略图两种控场视图',
+          '画笔批注实时同步放映屏，翻页自动清屏',
         ],
-        category: '文档处理',
+        category: 'PDF 放映',
+        url: '/algopdf',
+        siteLabel: '了解详情 →',
       },
       {
         ...sharedProducts[4],
@@ -155,7 +157,7 @@ const zhContent: SiteContent = {
       {
         question: 'AlgoCOM、AlgoTerm、AlgoGit、AlgoPDF 分别是做什么的？',
         answer:
-          'AlgoCOM 是串口通信与调试工具，AlgoTerm 是终端模拟器，AlgoGit 是 Git 图形化客户端，AlgoPDF 是 PDF 工具箱。',
+          'AlgoCOM 是串口通信与调试工具，AlgoTerm 是终端模拟器，AlgoGit 是 Git 图形化客户端，AlgoPDF 是让 PDF 像 PPT 一样放映的本地播放器。',
       },
       {
         question: 'AlgoCode 和 AlgoClass 是什么关系？',
@@ -165,13 +167,13 @@ const zhContent: SiteContent = {
       {
         question: '这些软件收费吗？',
         answer:
-          'AlgoCode 与 AlgoClass 免费使用。AlgoCOM、AlgoTerm、AlgoGit、AlgoPDF 尚未发布，定价以后续公告为准。',
+          'AlgoCode 与 AlgoClass 免费使用，AlgoPDF 即将登陆 Microsoft Store。AlgoCOM、AlgoTerm、AlgoGit 尚未发布，定价以后续公告为准。',
       },
       {
         question: '在哪里下载这些软件？',
         answer: 'AlgoCode 与 AlgoClass 可在',
         answerSuffix:
-          '下载。AlgoCOM、AlgoTerm、AlgoGit、AlgoPDF 尚未发布，敬请期待。',
+          '下载。AlgoPDF 可从 Microsoft Store 获取；AlgoCOM、AlgoTerm、AlgoGit 尚未发布，敬请期待。',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
@@ -294,13 +296,15 @@ const enContent: SiteContent = {
       },
       {
         ...sharedProducts[3],
-        tagline: 'A handy PDF toolbox — common tasks done in one step.',
+        tagline: 'A local PDF player that presents PDFs like slides.',
         features: [
-          'Merge, split, rotate and extract pages',
-          'Convert between PDF and Office / images faithfully',
-          'Processed locally — your files never leave the device',
+          'Full-screen playback on a second display, pages in sync',
+          'Dual-page and thumbnail views for the presenter',
+          'Live pen annotations, cleared on every page turn',
         ],
-        category: 'Documents',
+        category: 'PDF Playback',
+        url: '/algopdf',
+        siteLabel: 'Learn more →',
       },
       {
         ...sharedProducts[4],
@@ -340,7 +344,7 @@ const enContent: SiteContent = {
       {
         question: 'What do AlgoCOM, AlgoTerm, AlgoGit and AlgoPDF do?',
         answer:
-          'AlgoCOM is a serial communication and debugging tool, AlgoTerm is a terminal emulator, AlgoGit is a visual Git client, and AlgoPDF is a PDF toolbox.',
+          'AlgoCOM is a serial communication and debugging tool, AlgoTerm is a terminal emulator, AlgoGit is a visual Git client, and AlgoPDF is a local PDF player that presents PDFs like slides.',
       },
       {
         question: 'What is the relationship between AlgoCode and AlgoClass?',
@@ -350,13 +354,13 @@ const enContent: SiteContent = {
       {
         question: 'Are these products free?',
         answer:
-          'AlgoCode and AlgoClass are free to use. AlgoCOM, AlgoTerm, AlgoGit and AlgoPDF are not released yet; pricing will be announced later.',
+          'AlgoCode and AlgoClass are free to use, and AlgoPDF is coming soon to the Microsoft Store. AlgoCOM, AlgoTerm and AlgoGit are not released yet; pricing will be announced later.',
       },
       {
         question: 'Where can I download the software?',
         answer: 'AlgoCode and AlgoClass can be downloaded from',
         answerSuffix:
-          '. AlgoCOM, AlgoTerm, AlgoGit and AlgoPDF are not released yet.',
+          '. AlgoPDF is available on the Microsoft Store; AlgoCOM, AlgoTerm and AlgoGit are not released yet.',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
