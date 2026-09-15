@@ -121,6 +121,12 @@ export default defineConfig({
         pdfEn: fileURLToPath(
           new URL('./en/algopdf/index.html', import.meta.url),
         ),
+        grepZh: fileURLToPath(
+          new URL('./algogrep/index.html', import.meta.url),
+        ),
+        grepEn: fileURLToPath(
+          new URL('./en/algogrep/index.html', import.meta.url),
+        ),
         grepPrivacyZh: fileURLToPath(
           new URL('./algogrep/privacy/index.html', import.meta.url),
         ),

@@ -4,7 +4,7 @@ import type { Locale, SiteContent } from '@/types/content';
 const assetBase = import.meta.env.BASE_URL;
 
 const productLogos = {
-  algocom: `${assetBase}assets/img/logos/algocom.svg`,
+  algogrep: `${assetBase}assets/img/logos/algogrep.svg`,
   algoterm: `${assetBase}assets/img/logos/algoterm.svg`,
   augurGit: `${assetBase}assets/img/logos/augur-git.svg`,
   algopdf: `${assetBase}assets/img/logos/algopdf.svg`,
@@ -14,9 +14,10 @@ const productLogos = {
 
 const sharedProducts = [
   {
-    name: 'AlgoCOM',
-    logo: productLogos.algocom,
+    name: 'AlgoGrep',
+    logo: productLogos.algogrep,
     accent: 'blue',
+    productUrl: withBase('/algogrep/'),
   },
   {
     name: 'AlgoTerm',
@@ -56,7 +57,7 @@ const zhContent: SiteContent = {
   meta: {
     title: 'AlgoSoft — 为开发者打造的工具家族',
     description:
-      'AlgoSoft 旗下产品：AlgoCOM、AlgoTerm、Augur Git、AlgoPDF、AlgoCode 与 AlgoClass。Augur Git 是面向本地 AI 辅助开发、以代码审查为先的 Git 客户端。',
+      'AlgoSoft 旗下产品：AlgoGrep、AlgoTerm、Augur Git、AlgoPDF、AlgoCode 与 AlgoClass。AlgoGrep 是内嵌 ripgrep 内核的本地文件搜索工具。',
     canonical: 'https://algosoft.cc/',
   },
   navigation: {
@@ -70,7 +71,7 @@ const zhContent: SiteContent = {
     titleBefore: '为开发者打造的',
     titleAfter: '算法级工具家族',
     subtitle:
-      '六款精心打磨的工具，覆盖串口通信、终端、版本控制、文档处理、代码编辑与编程教学。',
+      '六款精心打磨的工具，覆盖文件搜索、终端、版本控制、文档处理、代码编辑与编程教学。',
     primaryCta: '浏览产品',
     secondaryCta: '了解 AlgoSoft',
     terminalLabel: '终端窗口：AlgoSoft 产品列表',
@@ -82,13 +83,15 @@ const zhContent: SiteContent = {
     items: [
       {
         ...sharedProducts[0],
-        tagline: '串口通信与调试工具，让每一次收发都清晰可控。',
+        tagline:
+          '内嵌 ripgrep 内核的本地文件搜索：正则、文档、图片 OCR、扫描件 PDF，即搜即预览，全程离线。',
         features: [
-          '多串口实时监视与数据收发',
-          '十六进制 / 文本双视图，时间戳完整记录',
-          '常用波特率一键切换，脚本化自动应答',
+          '进程内 ripgrep 内核，数万文件秒级出结果',
+          'Word / PPT / Excel / PDF 正文与截图 OCR 直接搜',
+          '替换先预览后写入，原子写入、自动备份、一键撤销',
         ],
-        category: '串口调试',
+        category: '文件搜索',
+        productLabel: '了解产品 →',
       },
       {
         ...sharedProducts[1],
@@ -159,12 +162,12 @@ const zhContent: SiteContent = {
       {
         question: 'AlgoSoft 是什么？',
         answer:
-          'AlgoSoft 是一个开发者工具品牌，旗下有六款产品：AlgoCOM、AlgoTerm、Augur Git、AlgoPDF、AlgoCode 与 AlgoClass。',
+          'AlgoSoft 是一个开发者工具品牌，旗下有六款产品：AlgoGrep、AlgoTerm、Augur Git、AlgoPDF、AlgoCode 与 AlgoClass。',
       },
       {
-        question: 'AlgoCOM、AlgoTerm、Augur Git、AlgoPDF 分别是做什么的？',
+        question: 'AlgoGrep、AlgoTerm、Augur Git、AlgoPDF 分别是做什么的？',
         answer:
-          'AlgoCOM 是串口通信与调试工具，AlgoTerm 是终端模拟器，Augur Git 是面向本地 AI 辅助开发、以代码审查为先的 Git 客户端，AlgoPDF 是让 PDF 像 PPT 一样放映的本地播放器。',
+          'AlgoGrep 是内嵌 ripgrep 内核的本地文件搜索工具，AlgoTerm 是终端模拟器，Augur Git 是面向本地 AI 辅助开发、以代码审查为先的 Git 客户端，AlgoPDF 是让 PDF 像 PPT 一样放映的本地播放器。',
       },
       {
         question: 'AlgoCode 和 AlgoClass 是什么关系？',
@@ -174,13 +177,13 @@ const zhContent: SiteContent = {
       {
         question: '这些软件收费吗？',
         answer:
-          'AlgoCode 与 AlgoClass 免费使用，AlgoPDF 即将登陆 Microsoft Store。AlgoCOM 与 AlgoTerm 尚未发布；Augur Git 提供 Nightly 版本，其他产品的定价以后续公告为准。',
+          'AlgoCode 与 AlgoClass 免费使用，AlgoGrep 目前免费、即将登陆 Microsoft Store。AlgoTerm 尚未发布；Augur Git 提供 Nightly 版本，其他产品的定价以后续公告为准。',
       },
       {
         question: '在哪里下载这些软件？',
         answer: 'AlgoCode 与 AlgoClass 可在',
         answerSuffix:
-          '下载。Augur Git 可从其 GitHub Releases 页面下载 Nightly 版本；AlgoPDF 可从 Microsoft Store 获取；AlgoCOM 与 AlgoTerm 尚未发布，敬请期待。',
+          '下载。Augur Git 可从其 GitHub Releases 页面下载 Nightly 版本；AlgoPDF 可从 Microsoft Store 获取；AlgoGrep 即将登陆 Microsoft Store，敬请期待；AlgoTerm 尚未发布。',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
@@ -242,7 +245,7 @@ const enContent: SiteContent = {
   meta: {
     title: 'AlgoSoft — A family of tools built for developers',
     description:
-      'Products by AlgoSoft: AlgoCOM, AlgoTerm, Augur Git, AlgoPDF, AlgoCode and AlgoClass. Augur Git is a local-first, review-first Git client for AI-assisted development.',
+      'Products by AlgoSoft: AlgoGrep, AlgoTerm, Augur Git, AlgoPDF, AlgoCode and AlgoClass. AlgoGrep is a local file-search tool with an embedded ripgrep core.',
     canonical: 'https://algosoft.cc/en/',
   },
   navigation: {
@@ -256,7 +259,7 @@ const enContent: SiteContent = {
     titleBefore: 'A family of tools',
     titleAfter: 'built for developers',
     subtitle:
-      'Six carefully crafted tools covering serial communication, terminal, version control, documents, code editing and coding education.',
+      'Six carefully crafted tools covering file search, terminal, version control, documents, code editing and coding education.',
     primaryCta: 'Explore Products',
     secondaryCta: 'About AlgoSoft',
     terminalLabel: 'Terminal window listing AlgoSoft products',
@@ -270,13 +273,15 @@ const enContent: SiteContent = {
       {
         ...sharedProducts[0],
         tagline:
-          'Serial communication and debugging, with every byte under control.',
+          'Local file search with a ripgrep core: regex, documents, image OCR and scanned PDFs, with instant preview. Offline.',
         features: [
-          'Real-time monitoring and transceiving on multiple ports',
-          'Hex / text dual view with full timestamps',
-          'One-click baud rates and scripted auto-response',
+          'Embedded ripgrep core: tens of thousands of files in seconds',
+          'Search inside Word / PPT / Excel / PDF and screenshots via OCR',
+          'Preview-first replacement with atomic writes, backups and undo',
         ],
-        category: 'Serial Port',
+        category: 'File Search',
+        productUrl: withBase('/en/algogrep/'),
+        productLabel: 'Explore product →',
       },
       {
         ...sharedProducts[1],
@@ -352,12 +357,12 @@ const enContent: SiteContent = {
       {
         question: 'What is AlgoSoft?',
         answer:
-          'AlgoSoft is a developer-tools brand with six products: AlgoCOM, AlgoTerm, Augur Git, AlgoPDF, AlgoCode and AlgoClass.',
+          'AlgoSoft is a developer-tools brand with six products: AlgoGrep, AlgoTerm, Augur Git, AlgoPDF, AlgoCode and AlgoClass.',
       },
       {
-        question: 'What do AlgoCOM, AlgoTerm, Augur Git and AlgoPDF do?',
+        question: 'What do AlgoGrep, AlgoTerm, Augur Git and AlgoPDF do?',
         answer:
-          'AlgoCOM is a serial communication and debugging tool, AlgoTerm is a terminal emulator, Augur Git is a local-first, review-first Git client for AI-assisted development, and AlgoPDF is a local PDF player that presents PDFs like slides.',
+          'AlgoGrep is a local file-search tool with an embedded ripgrep core, AlgoTerm is a terminal emulator, Augur Git is a local-first, review-first Git client for AI-assisted development, and AlgoPDF is a local PDF player that presents PDFs like slides.',
       },
       {
         question: 'What is the relationship between AlgoCode and AlgoClass?',
@@ -367,13 +372,13 @@ const enContent: SiteContent = {
       {
         question: 'Are these products free?',
         answer:
-          'AlgoCode and AlgoClass are free to use, and AlgoPDF is coming soon to the Microsoft Store. AlgoCOM and AlgoTerm are not released yet; Augur Git offers nightly builds, and pricing for other products will be announced later.',
+          'AlgoCode and AlgoClass are free to use, and AlgoGrep is currently free and coming soon to the Microsoft Store. AlgoTerm is not released yet; Augur Git offers nightly builds, and pricing for other products will be announced later.',
       },
       {
         question: 'Where can I download the software?',
         answer: 'AlgoCode and AlgoClass can be downloaded from',
         answerSuffix:
-          '. Augur Git offers nightly builds on its GitHub Releases page; AlgoPDF is available on the Microsoft Store; AlgoCOM and AlgoTerm are not released yet.',
+          '. Augur Git offers nightly builds on its GitHub Releases page; AlgoPDF is available on the Microsoft Store; AlgoGrep is coming soon to the Microsoft Store; AlgoTerm is not released yet.',
         answerLink: { label: 'algocode.cc', href: 'https://algocode.cc' },
       },
       {
