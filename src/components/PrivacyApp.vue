@@ -9,7 +9,10 @@ const routes = getSiteRoutes(props.content.locale);
 
 const footerLinks = [
   { label: props.content.footer.backHome, href: routes.home },
-  { label: props.content.footer.product, href: props.content.footer.productPath },
+  {
+    label: props.content.footer.product,
+    href: props.content.footer.productPath,
+  },
   { label: '5266917@qq.com', href: 'mailto:5266917@qq.com' },
 ] as const;
 
