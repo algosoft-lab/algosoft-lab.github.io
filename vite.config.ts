@@ -151,6 +151,10 @@ export default defineConfig({
         decklePrivacyEn: fileURLToPath(
           new URL('./en/deckle/privacy/index.html', import.meta.url),
         ),
+        deckleZh: fileURLToPath(new URL('./deckle/index.html', import.meta.url)),
+        deckleEn: fileURLToPath(
+          new URL('./en/deckle/index.html', import.meta.url),
+        ),
       },
     },
   },
