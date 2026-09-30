@@ -31,7 +31,7 @@ const zhContent: GrepPageContent = {
     primaryUrl: '#features',
     secondaryCta: '返回 AlgoSoft',
     secondaryUrl: withBase('/'),
-    note: 'Windows · 即将登陆 Microsoft Store · 无账号 · 全程离线',
+    note: 'Windows · Microsoft Store 已上线 · 无账号 · 全程离线',
     visualLabel: 'AlgoGrep 实际运行界面：正则检索与即时预览',
     visualAlt: 'AlgoGrep 界面截图：用正则检索邮箱地址，命中高亮并同步代码预览',
   },
@@ -143,11 +143,11 @@ const zhContent: GrepPageContent = {
     linkPath: GREP_PRIVACY_PATH,
   },
   cta: {
-    title: '第一时间用上 AlgoGrep',
+    title: 'AlgoGrep 已登陆 Microsoft Store',
     subtitle:
-      'AlgoGrep 即将登陆 Microsoft Store。想第一时间收到上线消息，或对产品有任何建议，欢迎来信。',
-    action: '联系我们',
-    actionUrl: `mailto:${CONTACT_EMAIL}`,
+      '免费下载，即装即用：正则检索、文档内容搜索、图片 OCR、扫描件 PDF，全程本地完成。',
+    action: '从 Microsoft Store 获取',
+    actionUrl: 'https://apps.microsoft.com/detail/9NBR15XPTDM7',
   },
   footer: {
     backHome: '返回 AlgoSoft 首页',
@@ -181,7 +181,7 @@ const enContent: GrepPageContent = {
     primaryUrl: '#features',
     secondaryCta: 'Back to AlgoSoft',
     secondaryUrl: withBase('/en/'),
-    note: 'Windows · Coming soon to the Microsoft Store · No account · Offline',
+    note: 'Windows · Now on the Microsoft Store · No account · Offline',
     visualLabel: 'AlgoGrep in action: regex search with instant preview',
     visualAlt:
       'AlgoGrep screenshot: searching email addresses with a regex, hits highlighted with a code preview',
@@ -302,11 +302,11 @@ const enContent: GrepPageContent = {
     linkPath: withBase('/en/algogrep/privacy/'),
   },
   cta: {
-    title: 'Be first to try AlgoGrep',
+    title: 'AlgoGrep is on the Microsoft Store',
     subtitle:
-      'AlgoGrep is coming soon to the Microsoft Store. To hear about the launch first, or to share feedback, drop us a line.',
-    action: 'Contact us',
-    actionUrl: `mailto:${CONTACT_EMAIL}`,
+      'Free to install: regex search, document contents, image OCR and scanned PDFs — all processed locally.',
+    action: 'Get it from the Microsoft Store',
+    actionUrl: 'https://apps.microsoft.com/detail/9NBR15XPTDM7',
   },
   footer: {
     backHome: 'Back to AlgoSoft home',
