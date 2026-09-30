@@ -226,6 +226,88 @@ export interface AugurPageContent {
   };
 }
 
+export interface GrepFeature {
+  title: string;
+  description: string;
+  accent: string;
+}
+
+export interface GrepWorkflowStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface GrepPrivacyItem {
+  title: string;
+  description: string;
+}
+
+export interface GrepPageContent {
+  locale: Locale;
+  htmlLang: string;
+  alternatePath: string;
+  alternateLabel: string;
+  meta: {
+    title: string;
+    description: string;
+    canonical: string;
+  };
+  nav: {
+    home: string;
+  };
+  hero: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    primaryCta: string;
+    primaryUrl: string;
+    secondaryCta: string;
+    secondaryUrl: string;
+    note: string;
+    visualLabel: string;
+    visualAlt: string;
+  };
+  intro: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    paragraphs: readonly string[];
+  };
+  features: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    items: readonly GrepFeature[];
+  };
+  workflow: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    steps: readonly GrepWorkflowStep[];
+  };
+  privacy: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    items: readonly GrepPrivacyItem[];
+    linkLabel: string;
+    linkPath: string;
+  };
+  cta: {
+    title: string;
+    subtitle: string;
+    action: string;
+    actionUrl: string;
+  };
+  footer: {
+    backHome: string;
+    privacyLabel: string;
+    privacyPath: string;
+    copyright: string;
+  };
+}
+
 export interface PrivacySection {
   heading: string;
   paragraphs: readonly string[];
